@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2018%2F12%2F14%2Ftest%2F</url>
-    <content type="text"><![CDATA[adfadadfadfafa]]></content>
+    <title><![CDATA[redis集群部署]]></title>
+    <url>%2F2018%2F12%2F14%2Fredis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324sudo sucd /tmp &amp;&amp; wget http://msstest-corp.sankuai.com/v1/mss_hua9JwgTGEOH-+=lADhSBT0A==/publish/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/meituan/apps/rediscd /opt/meituan/apps/redis## 6379mkdir -p /opt/meituan/appdatas/redis6379wget http://msstest-corp.sankuai.com/v1/mss_hua9JwgTGEOH-+=lADhSBT0A==/publish/redis_6379_3.conf -O 6379.confredis-server /opt/meituan/apps/redis/6379.confwget http://msstest-corp.sankuai.com/v1/mss_hua9JwgTGEOH-+=lADhSBT0A==/publish/redis-monitor.py(crontab -l 2&gt;/dev/null |grep -Fv "6379.conf"; echo "* * * * * python /opt/meituan/apps/redis/redis-monitor.py /opt/meituan/apps/redis/6379.conf &gt; /dev/null 2&gt;&amp;1 &amp;") | crontab -## 6380mkdir -p /opt/meituan/appdatas/redis6380wget http://msstest-corp.sankuai.com/v1/mss_hua9JwgTGEOH-+=lADhSBT0A==/publish/redis_6380_3.conf -O 6380.confredis-server /opt/meituan/apps/redis/6380.conf(crontab -l 2&gt;/dev/null |grep -Fv "6380.conf"; echo "* * * * * python /opt/meituan/apps/redis/redis-monitor.py /opt/meituan/apps/redis/6380.conf &gt; /dev/null 2&gt;&amp;1 &amp;") | crontab -## 6381mkdir -p /opt/meituan/appdatas/redis6381wget http://msstest-corp.sankuai.com/v1/mss_hua9JwgTGEOH-+=lADhSBT0A==/publish/redis_6381_3.conf -O 6381.confredis-server /opt/meituan/apps/redis/6381.conf(crontab -l 2&gt;/dev/null |grep -Fv "6381.conf"; echo "* * * * * python /opt/meituan/apps/redis/redis-monitor.py /opt/meituan/apps/redis/6381.conf &gt; /dev/null 2&gt;&amp;1 &amp;") | crontab -exitexit]]></content>
       <categories>
-        <category>erlang</category>
+        <category>组件</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
