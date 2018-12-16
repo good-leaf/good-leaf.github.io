@@ -3,12 +3,12 @@
   <entry>
     <title><![CDATA[account]]></title>
     <url>%2F2018%2F12%2F16%2Faccount%2F</url>
-    <content type="text"><![CDATA[git账号管理代码账号username:good-leafmail:rwzgnyyj@163.com 软件账号username:yangyajun-softmail:yangyajun_c@126.gom]]></content>
+    <content type="text"><![CDATA[git账号管理代码账号12username:good-leafmail:rwzgnyyj 软件账号12username:yangyajun-softmail:yangyajun_c]]></content>
   </entry>
   <entry>
     <title><![CDATA[hexo 安装]]></title>
     <url>%2F2018%2F12%2F14%2Fhexo%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[git设置git config –global user.name “good-leaf”git config –global user.email “rwzgnyyj@163.com“ hexo安装npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install –save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.ymlserver: port: 4001 compress: true header: true 搜索支持：npm install hexo-generator-searchdb –save search: path: search.xml field: post format: html limit: 10000 更换主题更换主题后执行hexo g再次访问页面显示：extends partial/layout block container include mixins/post +posts() block pagination include mixins/paginator +home() block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
+    <content type="text"><![CDATA[git设置12git config --global user.name &quot;good-leaf&quot;git config --global user.email &quot;rwzgnyyj@163.com&quot; hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -18,8 +18,8 @@
   </entry>
   <entry>
     <title><![CDATA[rabbitmq 集群部署]]></title>
-    <url>%2F2018%2F12%2F14%2Frabbit%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup "^" '&#123;"ha-mode":"exactly", "ha-params":2, "ha-sync-mode":"automatic"&#125;'rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p "/" admin '.*' '.*' '.*'rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p "/" user '.*' '.*' '.*']]></content>
+    <url>%2F2018%2F12%2F14%2Frabbitmq%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup &quot;^&quot; &apos;&#123;&quot;ha-mode&quot;:&quot;exactly&quot;, &quot;ha-params&quot;:2, &quot;ha-sync-mode&quot;:&quot;automatic&quot;&#125;&apos;rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p &quot;/&quot; admin &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p &quot;/&quot; user &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;]]></content>
       <categories>
         <category>rabbitmq</category>
       </categories>
@@ -30,7 +30,7 @@
   <entry>
     <title><![CDATA[redis集群部署]]></title>
     <url>%2F2018%2F12%2F14%2Fredis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/meituan/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/meituan/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
+    <content type="text"><![CDATA[123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
       <categories>
         <category>redis</category>
       </categories>
