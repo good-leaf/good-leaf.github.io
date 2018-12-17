@@ -7,8 +7,19 @@
   </entry>
   <entry>
     <title><![CDATA[hexo 安装]]></title>
+    <url>%2F2018%2F12%2F16%2Fmarkdown%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[标题示例：123# 这是一级标题## 这是二级标题### 这是三级标题 效果如下： 这是一级标题这是二级标题这是三级标题字体 加粗 要加粗的文件左右分别用两个*号包起来 斜体 要倾斜的文件左右分别用一个*号包起来 斜体加粗 要倾斜和佳粗到文字左右分别用三个*号包起来 删除线 要加删除线的文件左右分别用两个～～号包起来 示例： 1234** 加粗 *** 倾斜 **** 倾斜加粗 ***～～ 加删除线 ～～ 效果如下： 加粗 倾斜 倾斜加粗 _ 删除线 _]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo 安装]]></title>
     <url>%2F2018%2F12%2F14%2Fhexo%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[git设置12git config --global user.name &quot;good-leaf&quot;git config --global user.email &quot;rwzgnyyj@163.com&quot; hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
+    <content type="text"><![CDATA[git设置12git config --global user.name &quot;good-leaf&quot;git config --global user.email &quot;rwzgnyyj@xxx.com&quot; hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
       <categories>
         <category>hexo</category>
       </categories>
