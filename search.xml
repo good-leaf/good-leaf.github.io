@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo 安装]]></title>
+    <url>%2F2018%2F12%2F20%2Fiterm%2F</url>
+    <content type="text"><![CDATA[标签新建标签：command + t 关闭标签：command + w 切换标签：command + 数字 command + 左右方向键 切换全屏：command + enter 查找：command + f 分屏垂直分屏：command + d 水平分屏：command + shift + d 切换屏幕：command + option + 方向键 command + [ 或 command + ] 查看历史命令：command + ; 查看剪贴板历史：command + shift + h 其他清除当前行：ctrl + u 到行首：ctrl + a 到行尾：ctrl + e 前进后退：ctrl + f/b (相当于左右方向键) 上一条命令：ctrl + p 搜索命令历史：ctrl + r 删除当前光标的字符：ctrl + d 删除光标之前的字符：ctrl + h 删除光标之前的单词：ctrl + w 删除到文本末尾：ctrl + k 交换光标处文本：ctrl + t 清屏1：command + r 清屏2：ctrl + l]]></content>
+      <categories>
+        <category>iterm</category>
+      </categories>
+      <tags>
+        <tag>iterm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[account]]></title>
     <url>%2F2018%2F12%2F16%2Faccount%2F</url>
     <content type="text"><![CDATA[git账号管理代码账号12username:good-leafmail:rwzgnyyj 软件账号12username:yangyajun-softmail:yangyajun_c]]></content>
   </entry>
   <entry>
-    <title><![CDATA[hexo 安装]]></title>
+    <title><![CDATA[markdown 语法]]></title>
     <url>%2F2018%2F12%2F16%2Fmarkdown%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[标题示例：123# 这是一级标题## 这是二级标题### 这是三级标题 效果如下： 这是一级标题这是二级标题这是三级标题字体 加粗 要加粗的文件左右分别用两个*号包起来 斜体 要倾斜的文件左右分别用一个*号包起来 斜体加粗 要倾斜和佳粗到文字左右分别用三个*号包起来 删除线 要加删除线的文件左右分别用两个～～号包起来 示例： 1234** 加粗 *** 倾斜 **** 倾斜加粗 ***～～ 加删除线 ～～ 效果如下： 加粗 倾斜 倾斜加粗 _ 删除线 _]]></content>
       <categories>
