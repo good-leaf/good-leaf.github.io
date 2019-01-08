@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vimdiff]]></title>
+    <url>%2F2019%2F01%2F08%2Fvimdiff%2F</url>
+    <content type="text"><![CDATA[##实用的vim下比较两个文件命令： ###1、 vimdiff file1 file2终端下输入该命令进入vim，垂直分隔窗口进行比较 ###2、 vimdiff -o file1 file2水平分隔窗口进行比较 ###3、 ctrl+w (j,k,h,l)上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l） ###4、 ctrl+w (J,K,H,L)上下左右移动光标所在窗口的位置 ###5、 zo 和 zc打开折叠区 和 关闭折叠区 ###6、 ]c 和 [c将光标移动到下一个不同区 和 上一个不同区 ###7、 do 和 dp将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置 ###8、 :diffu[!]vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较] ###9、 :diffo[!]vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态 ###10、:diffs file1vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口 ###11、:vert diffs file1vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口 ###12、:difftvim下将光标所在窗口变为比较窗口 ##其它技巧： ###1、 diff -u file1 file2 &gt; file3终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo 安装]]></title>
     <url>%2F2018%2F12%2F20%2Fiterm%2F</url>
     <content type="text"><![CDATA[标签新建标签：command + t 关闭标签：command + w 切换标签：command + 数字 command + 左右方向键 切换全屏：command + enter 查找：command + f 分屏垂直分屏：command + d 水平分屏：command + shift + d 切换屏幕：command + option + 方向键 command + [ 或 command + ] 查看历史命令：command + ; 查看剪贴板历史：command + shift + h 其他清除当前行：ctrl + u 到行首：ctrl + a 到行尾：ctrl + e 前进后退：ctrl + f/b (相当于左右方向键) 上一条命令：ctrl + p 搜索命令历史：ctrl + r 删除当前光标的字符：ctrl + d 删除光标之前的字符：ctrl + h 删除光标之前的单词：ctrl + w 删除到文本末尾：ctrl + k 交换光标处文本：ctrl + t 清屏1：command + r 清屏2：ctrl + l]]></content>
