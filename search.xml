@@ -63,7 +63,7 @@
   <entry>
     <title><![CDATA[redis集群部署]]></title>
     <url>%2F2018%2F12%2F14%2Fredis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
+    <content type="text"><![CDATA[redis安装脚本123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
       <categories>
         <category>redis</category>
       </categories>
