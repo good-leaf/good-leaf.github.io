@@ -3,23 +3,23 @@
   <entry>
     <title><![CDATA[vimdiff]]></title>
     <url>%2F2019%2F01%2F08%2Fvimdiff%2F</url>
-    <content type="text"><![CDATA[实用的vim下比较两个文件命令：1、 vimdiff file1 file2终端下输入该命令进入vim，垂直分隔窗口进行比较 2、 vimdiff -o file1 file2水平分隔窗口进行比较 3、 ctrl+w (j,k,h,l)上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l） 4、 ctrl+w (J,K,H,L)上下左右移动光标所在窗口的位置 5、 zo 和 zc打开折叠区 和 关闭折叠区 6、 ]c 和 [c将光标移动到下一个不同区 和 上一个不同区 7、 do 和 dp将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置 8、 :diffu[!]vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较] 9、 :diffo[!]vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态 10、:diffs file1vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口 11、:vert diffs file1vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口 12、:difftvim下将光标所在窗口变为比较窗口 其它技巧：1、 diff -u file1 file2 &gt; file3终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式]]></content>
+    <content type="text"><![CDATA[##实用的vim下比较两个文件命令： ###1、 vimdiff file1 file2终端下输入该命令进入vim，垂直分隔窗口进行比较 ###2、 vimdiff -o file1 file2水平分隔窗口进行比较 ###3、 ctrl+w (j,k,h,l)上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l） ###4、 ctrl+w (J,K,H,L)上下左右移动光标所在窗口的位置 ###5、 zo 和 zc打开折叠区 和 关闭折叠区 ###6、 ]c 和 [c将光标移动到下一个不同区 和 上一个不同区 ###7、 do 和 dp将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置 ###8、 :diffu[!]vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较] ###9、 :diffo[!]vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态 ###10、:diffs file1vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口 ###11、:vert diffs file1vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口 ###12、:difftvim下将光标所在窗口变为比较窗口 ##其它技巧： ###1、 diff -u file1 file2 &gt; file3终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式]]></content>
       <categories>
-        <category>linux</category>
+        <category>vimdiff</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>vimdiff</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 安装]]></title>
-    <url>%2F2018%2F12%2F20%2Fiterm%2F</url>
-    <content type="text"><![CDATA[标签新建标签：command + t 关闭标签：command + w 切换标签：command + 数字 command + 左右方向键 切换全屏：command + enter 查找：command + f 分屏垂直分屏：command + d 水平分屏：command + shift + d 切换屏幕：command + option + 方向键 command + [ 或 command + ] 查看历史命令：command + ; 查看剪贴板历史：command + shift + h 其他清除当前行：ctrl + u 到行首：ctrl + a 到行尾：ctrl + e 前进后退：ctrl + f/b (相当于左右方向键) 上一条命令：ctrl + p 搜索命令历史：ctrl + r 删除当前光标的字符：ctrl + d 删除光标之前的字符：ctrl + h 删除光标之前的单词：ctrl + w 删除到文本末尾：ctrl + k 交换光标处文本：ctrl + t 清屏1：command + r 清屏2：ctrl + l]]></content>
+    <title><![CDATA[Mac iTerm使用]]></title>
+    <url>%2F2018%2F12%2F20%2FiTerm%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[Mac iTerm终端使用 标签新建标签：command + t 关闭标签：command + w 切换标签：command + 数字 command + 左右方向键 切换全屏：command + enter 查找：command + f 分屏垂直分屏：command + d 水平分屏：command + shift + d 切换屏幕：command + option + 方向键 command + [ 或 command + ] 查看历史命令：command + ; 查看剪贴板历史：command + shift + h 其他清除当前行：ctrl + u 到行首：ctrl + a 到行尾：ctrl + e 前进后退：ctrl + f/b (相当于左右方向键) 上一条命令：ctrl + p 搜索命令历史：ctrl + r 删除当前光标的字符：ctrl + d 删除光标之前的字符：ctrl + h 删除光标之前的单词：ctrl + w 删除到文本末尾：ctrl + k 交换光标处文本：ctrl + t 清屏1：command + r 清屏2：ctrl + l]]></content>
       <categories>
-        <category>iterm</category>
+        <category>Mac iTerm</category>
       </categories>
       <tags>
-        <tag>iterm</tag>
+        <tag>Mac iTerm</tag>
       </tags>
   </entry>
   <entry>
@@ -28,20 +28,9 @@
     <content type="text"><![CDATA[git账号管理代码账号12username:good-leafmail:rwzgnyyj 软件账号12username:yangyajun-softmail:yangyajun_c]]></content>
   </entry>
   <entry>
-    <title><![CDATA[markdown 语法]]></title>
-    <url>%2F2018%2F12%2F16%2Fmarkdown%E8%AF%AD%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[标题示例：123# 这是一级标题## 这是二级标题### 这是三级标题 效果如下： 这是一级标题这是二级标题这是三级标题字体 加粗 要加粗的文件左右分别用两个*号包起来 斜体 要倾斜的文件左右分别用一个*号包起来 斜体加粗 要倾斜和佳粗到文字左右分别用三个*号包起来 删除线 要加删除线的文件左右分别用两个～～号包起来 示例： 1234** 加粗 *** 倾斜 **** 倾斜加粗 ***～～ 加删除线 ～～ 效果如下： 加粗 倾斜 倾斜加粗 _ 删除线 _]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[hexo 安装]]></title>
     <url>%2F2018%2F12%2F14%2Fhexo%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[git设置12git config --global user.name &quot;good-leaf&quot;git config --global user.email &quot;rwzgnyyj@xxx.com&quot; hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
+    <content type="text"><![CDATA[git设置12git config --global user.name "good-leaf"git config --global user.email "rwzgnyyj@xxx.com" hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -50,9 +39,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[rabbitmq 集群部署]]></title>
-    <url>%2F2018%2F12%2F14%2Frabbitmq%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup &quot;^&quot; &apos;&#123;&quot;ha-mode&quot;:&quot;exactly&quot;, &quot;ha-params&quot;:2, &quot;ha-sync-mode&quot;:&quot;automatic&quot;&#125;&apos;rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p &quot;/&quot; admin &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p &quot;/&quot; user &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;]]></content>
+    <title><![CDATA[rabbitmq安装]]></title>
+    <url>%2F2018%2F12%2F14%2Frabbitmq%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[版本：rabbitmq-server-3.6.6-1.el6.noarch.rpm 1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup "^" '&#123;"ha-mode":"exactly", "ha-params":2, "ha-sync-mode":"automatic"&#125;'rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p "/" admin '.*' '.*' '.*'rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p "/" user '.*' '.*' '.*']]></content>
       <categories>
         <category>rabbitmq</category>
       </categories>
@@ -61,24 +50,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[redis集群部署]]></title>
-    <url>%2F2018%2F12%2F14%2Fredis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[redis安装脚本123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
+    <title><![CDATA[redis安装]]></title>
+    <url>%2F2018%2F12%2F14%2Fredis%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[版本：redis-3.2.8-1.el6.remi.x86_64.rpm 123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
       <categories>
         <category>redis</category>
       </categories>
       <tags>
         <tag>redis</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[MaHua是什么?]]></title>
-    <url>%2F2018%2F12%2F14%2Fmahua%2F</url>
-    <content type="text"><![CDATA[一个在线编辑markdown文档的编辑器 向Mac下优秀的markdown编辑器mou致敬 MaHua有哪些功能？ 方便的导入导出功能 直接把一个markdown的文本文件拖放到当前这个页面就可以了 导出为一个html格式的文件，样式一点也不会丢失 编辑和预览同步滚动，所见即所得（右上角设置） VIM快捷键支持，方便vim党们快速的操作 （右上角设置） 强大的自定义CSS功能，方便定制自己的展示 有数量也有质量的主题,编辑器和预览区域 完美兼容Github的markdown语法 预览区域代码高亮 所有选项自动记忆 有问题反馈在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流 邮件(dev.hubo#gmail.com, 把#换成@) QQ: 287759234 weibo: @草依山 twitter: @ihubo 捐助开发者在兴趣的驱动下,写一个免费的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。当然，有钱捧个钱场（右上角的爱心标志，支持支付宝和PayPal捐助），没钱捧个人场，谢谢各位。 感激感谢以下的项目,排名不分先后 mou ace jquery 关于作者1234var ihubo = &#123; nickName : "草依山", site : "http://jser.me"&#125;]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F12%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
