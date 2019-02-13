@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F02%2F13%2FIntellij%20IDEA%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[Intellij IDEA使用 关闭自动更新 Intellij IDEA -&gt; Preferences -&gt; Appearance &amp; Behavior -&gt; System Settings -&gt; Updates 下取消 Automatically check updates for勾选 代码编辑器主题风格 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Colors &amp; Fonts -&gt; Font 1234Scheme: DarculaShow only monospaced fonts 设置第一字体，Monaco 不支持中文 Primary font:Monaco Size:20 Line spacing:1.0Secondary font：YaHei Consolas Hybrid 设置第二字体 文件编码 File -&gt; Settings -&gt; Editor -&gt; File Encodings 1234Global Encoding:UTF-8Projectt Encoding:UTF-8Default encoding for properties files:UTF-8勾选上Transparent native-to-ascii conversion 类和方法注视模版 在File -&gt; Settings -&gt; Editor -&gt; File and Code Templates 编码缩进 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Code Style -&gt; Erlang Use tab character 不要勾选，然后indent设置为4，代表按一个tab为4个空格，并且自动整理格式也是4个空格一缩进。 123Tab size: 4 Indent: 4Continuation indent: 8 如果要对多个文件进行转换，可以在文件夹上面按右键，然后点击Reformat Code或者选中文件夹按快捷键ctrl+alt+L对多个快捷键整理。]]></content>
+    <title><![CDATA[Intellij IDEA使用]]></title>
+    <url>%2F2019%2F02%2F13%2FIntellijIDEA%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[关闭自动更新 Intellij IDEA -&gt; Preferences -&gt; Appearance &amp; Behavior -&gt; System Settings -&gt; Updates 下取消 Automatically check updates for勾选 代码编辑器主题风格 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Colors &amp; Fonts -&gt; Font 1234Scheme: DarculaShow only monospaced fonts 设置第一字体，Monaco 不支持中文 Primary font:Monaco Size:20 Line spacing:1.0Secondary font：YaHei Consolas Hybrid 设置第二字体 文件编码 File -&gt; Settings -&gt; Editor -&gt; File Encodings 1234Global Encoding:UTF-8Projectt Encoding:UTF-8Default encoding for properties files:UTF-8勾选上Transparent native-to-ascii conversion 类和方法注视模版 在File -&gt; Settings -&gt; Editor -&gt; File and Code Templates 编码缩进 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Code Style -&gt; Erlang Use tab character 不要勾选，然后indent设置为4，代表按一个tab为4个空格，并且自动整理格式也是4个空格一缩进。 123Tab size: 4 Indent: 4Continuation indent: 8 如果要对多个文件进行转换，可以在文件夹上面按右键，然后点击Reformat Code或者选中文件夹按快捷键ctrl+alt+L对多个快捷键整理。]]></content>
+      <categories>
+        <category>development_tool</category>
+      </categories>
+      <tags>
+        <tag>development_tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[java安装]]></title>
+    <url>%2F2019%2F02%2F13%2Fjava%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[java 1.8 安装 yum install yum install java-1.8.0-openjdk-devel.x86_64 java 环境变量 CLASSPATH中的tools.jar主要包含一些工具，如javac（将.java编译为.class）、javadoc（根据java源文件以html格式生成API文档）、javap（反汇编.class文件）等； 1234PATH=$PATH:$HOME/binJAVA_HOME=/usr/lib/jvm/java-1.8.0CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jarPATH=$JAVA_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH java 安装目录信息 dt.jar中包含了关于swing的控件对应的图标和BeanInfo.class 123456789101112/usr/lib/jvm-exports/java/usr/lib/java/usr/lib/jvm/java/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/bin/java/usr/share/java/usr/bin/java/var/lib/alternatives/java/etc/pki/java/etc/pki/ca-trust/extracted/java/etc/java/etc/alternatives/java]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[vimdiff]]></title>
@@ -30,36 +47,34 @@
   <entry>
     <title><![CDATA[account]]></title>
     <url>%2F2018%2F12%2F16%2Faccount%2F</url>
-    <content type="text"><![CDATA[git账号管理代码账号12username:good-leafmail:rwzgnyyj 软件账号12username:yangyajun-softmail:yangyajun_c]]></content>
+    <content type="text"><![CDATA[代码账号12username:good-leafmail:rwzgnyyj 软件账号12username:yangyajun-softmail:yangyajun_c]]></content>
+      <categories>
+        <category>self</category>
+      </categories>
+      <tags>
+        <tag>self</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[erlang 防坑指南]]></title>
     <url>%2F2018%2F12%2F16%2Ferlang%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97%2F</url>
-    <content type="text"><![CDATA[任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。 ‘–’ 运算与 ‘++’运算1234567891&gt; [1,2,3,4] -- [1] -- [2]. [2,3,4]算是erlang经典的问题了。这是从后面算起的，先算 [1] -- [2] ，得到 [1] 后被 [1,2,3,4] --，最后得到 [2,3,4] &apos;++&apos;运算也是一样的，也是从后面开始算起。2&gt; [1,2,3,4] -- [1] ++ [2,3,4].[]另外，以下这种情况也要注意，只会减去遇到的第一个元素。3&gt; [1,2,3,2] -- [2].[1,3,2] erlang:function_exported()这个接口是用来检查模块函数是否导出，但是，如果模块没加载过，这个函数返回值就是false1234563&gt; erlang:function_exported(odbc,start,0).false4&gt; odbc:start().ok5&gt; erlang:function_exported(odbc,start,0).true erlang:list_to_binary()如果参数是多层嵌套结构，就会被扁平化掉，使用 binary_to_list 不能转成原来的数据，也就是不可逆的。123456&gt; list_to_binary([1,2,[3,4],5]) .&lt;&lt;1,2,3,4,5&gt;&gt;如果想可逆，可以使用 erlang:term_to_binary7&gt; binary_to_term(term_to_binary([1,2,[3,4],5])).[1,2,[3,4],5] random:uniform()这个用于生成随机数，返回一个随机数浮点数。但是，这个函数的随机初始种子是个定值，而且种子就放在进程字典，就是说每个进程生成的随机数都是一样的。坑爹啊。1234567810&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end),ok.0.4435846174457203 0.7230402056221108ok11&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end),ok.0.4435846174457203 0.7230402056221108ok 所以，解决的方法就是进程启动后要重置随机数种子，然后再使用这个函数。1213&gt; random:seed(erlang:now()), random:uniform().0.4691405130019146 io_lib:char_list()这个函数在R15和R16下运行结果可能是相反的。123456789R15下：Eshell V5.9.3.1 (abort with ^G)1&gt; io_lib:char_list([10100,10600,20100]).falseR16下：Eshell V5.10.1 (abort with ^G) 1&gt; io_lib:char_list([10100,10600,20100]). true 不同类型数据比较比较公式为：number &lt; atom &lt; reference &lt; fun &lt; port &lt; pid &lt; tuple &lt; list &lt; bit string 系统限制123451. mnesia或dets有2G限制（无法定制）2. ets表最大数量默认1400（可用 ERL_MAX_ETS_TABLES 定制）3. 原子最大数量默认 1048576 （可用 +t 定制）4. 进程最大数量默认 32768 （可用 +P 定制， 范围1024-134217727）5. 端口/文件句柄最大数量默认 16384 （可用 +Q 定制， 范围1024-134217727）]]></content>
+    <content type="text"><![CDATA[任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。 ‘–’ 运算与 ‘++’运算1234567891&gt; [1,2,3,4] -- [1] -- [2]. [2,3,4]算是erlang经典的问题了。这是从后面算起的，先算 [1] -- [2] ，得到 [1] 后被 [1,2,3,4] --，最后得到 [2,3,4] &apos;++&apos;运算也是一样的，也是从后面开始算起。2&gt; [1,2,3,4] -- [1] ++ [2,3,4].[]另外，以下这种情况也要注意，只会减去遇到的第一个元素。3&gt; [1,2,3,2] -- [2].[1,3,2] erlang:function_exported()这个接口是用来检查模块函数是否导出，但是，如果模块没加载过，这个函数返回值就是false 1234563&gt; erlang:function_exported(odbc,start,0).false4&gt; odbc:start().ok5&gt; erlang:function_exported(odbc,start,0).true erlang:list_to_binary()如果参数是多层嵌套结构，就会被扁平化掉，使用 binary_to_list 不能转成原来的数据，也就是不可逆的。 123456&gt; list_to_binary([1,2,[3,4],5]) .&lt;&lt;1,2,3,4,5&gt;&gt;如果想可逆，可以使用 erlang:term_to_binary7&gt; binary_to_term(term_to_binary([1,2,[3,4],5])).[1,2,[3,4],5] random:uniform()这个用于生成随机数，返回一个随机数浮点数。但是，这个函数的随机初始种子是个定值，而且种子就放在进程字典，就是说每个进程生成的随机数都是一样的。坑爹啊。 1234567810&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end),ok.0.4435846174457203 0.7230402056221108ok11&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end),ok.0.4435846174457203 0.7230402056221108ok 所以，解决的方法就是进程启动后要重置随机数种子，然后再使用这个函数。 1213&gt; random:seed(erlang:now()), random:uniform().0.4691405130019146 io_lib:char_list()这个函数在R15和R16下运行结果可能是相反的。 123456789R15下：Eshell V5.9.3.1 (abort with ^G)1&gt; io_lib:char_list([10100,10600,20100]).falseR16下：Eshell V5.10.1 (abort with ^G) 1&gt; io_lib:char_list([10100,10600,20100]). true 不同类型数据比较比较公式为：number &lt; atom &lt; reference &lt; fun &lt; port &lt; pid &lt; tuple &lt; list &lt; bit string 系统限制123451. mnesia或dets有2G限制（无法定制）2. ets表最大数量默认1400（可用 ERL_MAX_ETS_TABLES 定制）3. 原子最大数量默认 1048576 （可用 +t 定制）4. 进程最大数量默认 32768 （可用 +P 定制， 范围1024-134217727）5. 端口/文件句柄最大数量默认 16384 （可用 +Q 定制， 范围1024-134217727）]]></content>
       <categories>
         <category>erlang</category>
       </categories>
+      <tags>
+        <tag>erlang</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[hexo 安装]]></title>
     <url>%2F2018%2F12%2F14%2Fhexo%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[git设置12git config --global user.name "good-leaf"git config --global user.email "rwzgnyyj@xxx.com" hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml1234server: port: 4001 compress: true header: true 搜索支持：1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
+    <content type="text"><![CDATA[git设置12git config --global user.name "good-leaf"git config --global user.email "rwzgnyyj@xxx.com" hexo安装1234567npm install -g hexo-clicdhexo init blogcd blognpm installhexo servernpm install --save hexo-deployer-git hexo配置添加git地址：使用ssh时，需要将本机ssh key添加到github上，并且选择ssh访问方式。 1234deploy: type: git repo: git@github.com:good-leaf/good-leaf.github.io.git branch: master 修改端口：vi _config.yml 1234server: port: 4001 compress: true header: true 搜索支持： 1234567npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000 更换主题：访问页面显示123456789101112extends partial/layoutblock container include mixins/post +posts()block pagination include mixins/paginator +home()block copyright include partial/copyright 解决：npm install –save hexo-renderer-jade]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[rabbitmq安装]]></title>
-    <url>%2F2018%2F12%2F14%2Frabbitmq%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[版本：rabbitmq-server-3.6.6-1.el6.noarch.rpm 1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup "^" '&#123;"ha-mode":"exactly", "ha-params":2, "ha-sync-mode":"automatic"&#125;'rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p "/" admin '.*' '.*' '.*'rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p "/" user '.*' '.*' '.*']]></content>
-      <categories>
-        <category>rabbitmq</category>
-      </categories>
-      <tags>
-        <tag>rabbitmq</tag>
       </tags>
   </entry>
   <entry>
@@ -71,6 +86,17 @@
       </categories>
       <tags>
         <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[rabbitmq安装]]></title>
+    <url>%2F2018%2F12%2F14%2Frabbitmq%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[版本：rabbitmq-server-3.6.6-1.el6.noarch.rpm 1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup "^" '&#123;"ha-mode":"exactly", "ha-params":2, "ha-sync-mode":"automatic"&#125;'rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p "/" admin '.*' '.*' '.*'rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p "/" user '.*' '.*' '.*']]></content>
+      <categories>
+        <category>rabbitmq</category>
+      </categories>
+      <tags>
+        <tag>rabbitmq</tag>
       </tags>
   </entry>
 </search>
