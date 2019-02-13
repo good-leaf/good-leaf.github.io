@@ -78,17 +78,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[redis安装]]></title>
-    <url>%2F2018%2F12%2F14%2Fredis%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[版本：redis-3.2.8-1.el6.remi.x86_64.rpm 123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
-      <categories>
-        <category>redis</category>
-      </categories>
-      <tags>
-        <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[rabbitmq安装]]></title>
     <url>%2F2018%2F12%2F14%2Frabbitmq%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[版本：rabbitmq-server-3.6.6-1.el6.noarch.rpm 1234567891011121314151617181920212223242526sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/rabbitmq3.6.6/rabbitmq-server-3.6.6-1.el6.noarch.rpmyum install -y rabbitmq-server-3.6.6-1.el6.noarch.rpmchown rabbitmq:rabbitmq /etc/rabbitmqexit# set cookiesudo su rabbitmqecho cookie &gt; /var/lib/rabbitmq/.erlang.cookiechmod u=r,g=,o= /var/lib/rabbitmq/.erlang.cookiewget https://yangyajun-soft.github.io//rabbitmq3.6.6/rabbitmq.config -O /etc/rabbitmq/rabbitmq.config# startrabbitmq-server -detached# join clusterrabbitmqctl stop_apprabbitmqctl join_cluster rabbit@hostrabbitmqctl start_app# configrabbitmqctl set_policy ha-backup "^" '&#123;"ha-mode":"exactly", "ha-params":2, "ha-sync-mode":"automatic"&#125;'rabbitmq-plugins enable rabbitmq_management# add adminrabbitmqctl add_user admin passwordrabbitmqctl set_permissions -p "/" admin '.*' '.*' '.*'rabbitmqctl set_user_tags admin administrator# add userrabbitmqctl add_user user passwordrabbitmqctl set_permissions -p "/" user '.*' '.*' '.*']]></content>
@@ -97,6 +86,17 @@
       </categories>
       <tags>
         <tag>rabbitmq</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[redis安装]]></title>
+    <url>%2F2018%2F12%2F14%2Fredis%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[版本：redis-3.2.8-1.el6.remi.x86_64.rpm 123456789101112131415161718sudo sucd /tmp &amp;&amp; wget https://yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpmyum install -y redis-3.2.8-1.el6.remi.x86_64.rpmsu sankuaimkdir -p /opt/xxx/apps/rediscd /opt/xxx/apps/redis## 6379mkdir -p /opt/xxx/appdatas/redis6379wget https://yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.confredis-server /opt/xxx/apps/redis/6379.conf## 6380mkdir -p /opt/xxx/appdatas/redis6380wget https://yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf## 6381mkdir -p /opt/xxx/appdatas/redis6381wget https://yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.confexitexit]]></content>
+      <categories>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
       </tags>
   </entry>
 </search>
