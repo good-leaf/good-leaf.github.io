@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F13%2Fjava%20%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[java 安装 java 1.8 安装 yum install yum install java-1.8.0-openjdk-devel.x86_64 java 环境变量 CLASSPATH中的tools.jar主要包含一些工具，如javac（将.java编译为.class）、javadoc（根据java源文件以html格式生成API文档）、javap（反汇编.class文件）等； 1234PATH=$PATH:$HOME/binJAVA_HOME=/usr/lib/jvm/java-1.8.0CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jarPATH=$JAVA_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH java 安装目录信息 dt.jar中包含了关于swing的控件对应的图标和BeanInfo.class 123456789101112/usr/lib/jvm-exports/java/usr/lib/java/usr/lib/jvm/java/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/bin/java/usr/share/java/usr/bin/java/var/lib/alternatives/java/etc/pki/java/etc/pki/ca-trust/extracted/java/etc/java/etc/alternatives/java]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F13%2FIntellij%20IDEA%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Intellij IDEA使用 关闭自动更新 Intellij IDEA -&gt; Preferences -&gt; Appearance &amp; Behavior -&gt; System Settings -&gt; Updates 下取消 Automatically check updates for勾选 代码编辑器主题风格 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Colors &amp; Fonts -&gt; Font 1234Scheme: DarculaShow only monospaced fonts 设置第一字体，Monaco 不支持中文 Primary font:Monaco Size:20 Line spacing:1.0Secondary font：YaHei Consolas Hybrid 设置第二字体 文件编码 File -&gt; Settings -&gt; Editor -&gt; File Encodings 1234Global Encoding:UTF-8Projectt Encoding:UTF-8Default encoding for properties files:UTF-8勾选上Transparent native-to-ascii conversion 类和方法注视模版 在File -&gt; Settings -&gt; Editor -&gt; File and Code Templates 编码缩进 Intellij IDEA -&gt; Preferences -&gt; Editor -&gt; Code Style -&gt; Erlang Use tab character 不要勾选，然后indent设置为4，代表按一个tab为4个空格，并且自动整理格式也是4个空格一缩进。 123Tab size: 4 Indent: 4Continuation indent: 8 如果要对多个文件进行转换，可以在文件夹上面按右键，然后点击Reformat Code或者选中文件夹按快捷键ctrl+alt+L对多个快捷键整理。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F13%2Ftest%2F</url>
+    <content type="text"><![CDATA[这是一级标题这是二级标题加粗 姓名 爱好 12]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F13%2F%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%2F</url>
+    <content type="text"><![CDATA[title: Mark Text date: 2018-12-16 18:35:26 updated: 2018-12-16 18:35:26 categories: Mark Text tags: Mark Text 使用]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[vimdiff]]></title>
     <url>%2F2019%2F01%2F08%2Fvimdiff%2F</url>
     <content type="text"><![CDATA[##实用的vim下比较两个文件命令： 1、 vimdiff file1 file2终端下输入该命令进入vim，垂直分隔窗口进行比较 2、 vimdiff -o file1 file2水平分隔窗口进行比较 3、 ctrl+w (j,k,h,l)上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l） 4、 ctrl+w (J,K,H,L)上下左右移动光标所在窗口的位置 5、 zo 和 zc打开折叠区 和 关闭折叠区 6、 ]c 和 [c将光标移动到下一个不同区 和 上一个不同区 7、 do 和 dp将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置 8、 :diffu[!]vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较] 9、 :diffo[!]vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态 10、:diffs file1vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口 11、:vert diffs file1vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口 12、:difftvim下将光标所在窗口变为比较窗口 ##其它技巧： 1、 diff -u file1 file2 &gt; file3终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式]]></content>
