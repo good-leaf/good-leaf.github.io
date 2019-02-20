@@ -6,10 +6,37 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T11:59:05.899Z</updated>
+  <updated>2019-02-20T12:04:23.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ivr知识</title>
+    <link href="http://yoursite.com/2019/02/20/IVR%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2019/02/20/IVR知识/</id>
+    <published>2019-02-20T12:04:23.000Z</published>
+    <updated>2019-02-20T12:04:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="自动外呼"><a href="#自动外呼" class="headerlink" title="自动外呼"></a>自动外呼</h3><p>用户下单后，外卖平台自动拨打商家电话，商家接通电话后播放ivr语音。</p><p>简单流程：播放订单信息后挂断。</p><p>复杂流程：商家根据播放语音选择按键，进入下一级ivr流程。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;自动外呼&quot;&gt;&lt;a href=&quot;#自动外呼&quot; class=&quot;headerlink&quot; title=&quot;自动外呼&quot;&gt;&lt;/a&gt;自动外呼&lt;/h3&gt;&lt;p&gt;用户下单后，外卖平台自动拨打商家电话，商家接通电话后播放ivr语音。&lt;/p&gt;
+&lt;p&gt;简单流程：播放订单信息后挂断。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="CTI呼叫中心" scheme="http://yoursite.com/categories/CTI%E5%91%BC%E5%8F%AB%E4%B8%AD%E5%BF%83/"/>
+    
+    
+      <category term="ivr知识" scheme="http://yoursite.com/tags/ivr%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>redis集群</title>
@@ -83,6 +110,30 @@
   </entry>
   
   <entry>
+    <title>rabbitmq知识</title>
+    <link href="http://yoursite.com/2019/02/13/rabbitmq%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2019/02/13/rabbitmq知识/</id>
+    <published>2019-02-13T09:23:39.000Z</published>
+    <updated>2019-02-20T09:12:56.932Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h3><p>RabbitMQ是实现AMQP（高级消息队列协议）的消息中间件的一种，最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。RabbitMQ主要是为了实现系统之间的双向解耦而实现的。当生产者大量产生数据时，消费者无法快速消费，那么需要一个中间层。保存这个数据。</p><p>AMQP，即Advanced Message Queuing Protocol，高级消息队列协议，是应用层协议的一个开放标准，为面向消息的中间件设计。消息中间件主要用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。</p><p>RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。</p><a id="more"></a><h3 id="交换机-Exchange"><a href="#交换机-Exchange" class="headerlink" title="交换机(Exchange)"></a>交换机(Exchange)</h3><p>RabbitMQ常用的Exchange Type有fanout、direct、topic、headers这四种（AMQP规范里还提到两种Exchange Type，分别为system与自定义，这里不予以描述）</p><ul><li>fanout</li></ul><p>转发消息到所有绑定队列。</p><ul><li>direct</li></ul><p>把消息路由到那些binding key与routing key完全匹配的Queue中。</p><ul><li>headers</li></ul><p>headers类型的Exchange不依赖于routing key与binding key的匹配规则来路由消息，而是根据发送的消息内容中的headers属性进行匹配。 在绑定Queue与Exchange时指定一组键值对；当消息发送到Exchange时，RabbitMQ会取到该消息的headers（也是一个键值对的形式），对比其中的键值对是否完全匹配Queue与Exchange绑定时指定的键值对；如果完全匹配则消息会路由到该Queue，否则不会路由到该Queue。</p><ul><li>topic</li></ul><p>topic类型的Exchange在匹配规则上进行了扩展。</p><p>routing key为一个句点号“. ”分隔的字符串（我们将被句点号“. ”分隔开的每一段独立的字符串称为一个单词），如“stock.usd.nyse”、“nyse.vmw”、“quick.orange.rabbit”。</p><p>binding key与routing key一样也是句点号“. ”分隔的字符串。</p><p>binding key中可以存在两种特殊字符“<em>”与“#”，用于做模糊匹配，其中“</em>”用于匹配一个单词，“#”用于匹配多个单词（可以是零个）。</p><h3 id="RabbitMQ-RPC"><a href="#RabbitMQ-RPC" class="headerlink" title="RabbitMQ RPC"></a>RabbitMQ RPC</h3><p><img src="https://cdn.www.sojson.com/file/doc/6121174952" alt=""></p><p><a href="http://www.sojson.com/tag_rabbitmq.html" title="RabbitMQ" target="_blank" rel="noopener">RabbitMQ</a> 中实现<code>RPC</code>的机制是：</p><ul><li><p>客户端发送请求（消息）时，在消息的属性（<code>MessageProperties</code>，在<code>AMQP</code>协议中定义了14中<code>properties</code>，这些属性会随着消息一起发送）中设置两个值<code>replyTo</code>（一个<code>Queue</code>名称，用于告诉服务器处理完成后将通知我的消息发送到这个<code>Queue</code>中）和<code>correlationId</code>（此次请求的标识号，服务器处理完成后需要将此属性返还，客户端将根据这个id了解哪条请求被成功执行了或执行失败）</p></li><li><p>服务器端收到消息并处理</p></li><li><p>服务器端处理完消息后，将生成一条应答消息到<code>replyTo</code>指定的<code>Queue</code>，同时带上<code>correlationId</code>属性</p></li><li><p>客户端之前已订阅<code>replyTo</code>指定的<code>Queue</code>，从中收到服务器的应答消息后，根据其中的<code>correlationId</code>属性分析哪条请求被执行了，根据执行结果进行后续业务处理</p></li></ul><h3 id="RabbitMQ-选型和对比"><a href="#RabbitMQ-选型和对比" class="headerlink" title="RabbitMQ 选型和对比"></a>RabbitMQ 选型和对比</h3><p>1.从社区活跃度</p><p>按照目前网络上的资料，<code>RabbitMQ</code>、<code>activeM</code>、<code>ZeroMQ</code>三者中，综合来看，<code>RabbitMQ</code>是首选。</p><p>2.持久化消息比较</p><p><code>ZeroMq</code>不支持，<code>ActiveMq</code>和<code>RabbitMq</code>都支持。持久化消息主要是指我们机器在不可抗力因素等情况下挂掉了，消息不会丢失的机制。</p><p>3.综合技术实现</p><p>可靠性、灵活的路由、集群、事务、高可用的队列、消息排序、问题追踪、可视化管理工具、插件系统等等。</p><p><code>RabbitMq</code>/<code>Kafka</code>最好，<code>ActiveMq</code>次之，<code>ZeroMq</code>最差。当然<code>ZeroMq</code>也可以做到，不过自己必须手动写代码实现，代码量不小。尤其是可靠性中的：持久性、投递确认、发布者证实和高可用性。</p><p> 4.高并发</p><p>毋庸置疑，<code>RabbitMQ</code>最高，原因是它的实现语言是天生具备高并发高可用的<code>erlang</code>语言。</p><p> 5.比较关注的比较，RabbitMQ和 Kafka</p><p><code>RabbitMq</code>比<code>Kafka</code>成熟，在可用性上，稳定性上，可靠性上， <a href="http://www.sojson.com/tag_rabbitmq.html" title="RabbitMq" target="_blank" rel="noopener">RabbitMq</a> 胜于 <a href="http://www.sojson.com/tag_kafka.html" title="Kafka" target="_blank" rel="noopener">Kafka</a> （理论上）。</p><p>另外，<code>Kafka</code>的定位主要在日志等方面， 因为<code>Kafka</code>设计的初衷就是处理日志的，可以看做是一个日志（消息）系统一个重要组件，针对性很强，所以 如果业务方面还是建议选择<code>RabbitMq</code>。</p><h3 id="RabbitMQ-Erlang-Client"><a href="#RabbitMQ-Erlang-Client" class="headerlink" title="RabbitMQ Erlang Client"></a>RabbitMQ Erlang Client</h3><p><a href="http://www.rabbitmq.com/erlang-client.html" title="Amqp Erlang Client" target="_blank" rel="noopener">Amqp Erlang Client</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;RabbitMQ简介&quot;&gt;&lt;a href=&quot;#RabbitMQ简介&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ简介&quot;&gt;&lt;/a&gt;RabbitMQ简介&lt;/h3&gt;&lt;p&gt;RabbitMQ是实现AMQP（高级消息队列协议）的消息中间件的一种，最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。RabbitMQ主要是为了实现系统之间的双向解耦而实现的。当生产者大量产生数据时，消费者无法快速消费，那么需要一个中间层。保存这个数据。&lt;/p&gt;
+&lt;p&gt;AMQP，即Advanced Message Queuing Protocol，高级消息队列协议，是应用层协议的一个开放标准，为面向消息的中间件设计。消息中间件主要用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。&lt;/p&gt;
+&lt;p&gt;RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开源框架" scheme="http://yoursite.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="rabbitmq" scheme="http://yoursite.com/tags/rabbitmq/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java安装</title>
     <link href="http://yoursite.com/2019/02/13/java%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2019/02/13/java安装/</id>
@@ -111,47 +162,25 @@
   </entry>
   
   <entry>
-    <title>rabbitmq知识</title>
-    <link href="http://yoursite.com/2019/02/13/rabbitmq%E7%9F%A5%E8%AF%86/"/>
-    <id>http://yoursite.com/2019/02/13/rabbitmq知识/</id>
-    <published>2019-02-13T09:23:39.000Z</published>
-    <updated>2019-02-20T09:12:56.932Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h3><p>RabbitMQ是实现AMQP（高级消息队列协议）的消息中间件的一种，最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。RabbitMQ主要是为了实现系统之间的双向解耦而实现的。当生产者大量产生数据时，消费者无法快速消费，那么需要一个中间层。保存这个数据。</p><p>AMQP，即Advanced Message Queuing Protocol，高级消息队列协议，是应用层协议的一个开放标准，为面向消息的中间件设计。消息中间件主要用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。</p><p>RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。</p><a id="more"></a><h3 id="交换机-Exchange"><a href="#交换机-Exchange" class="headerlink" title="交换机(Exchange)"></a>交换机(Exchange)</h3><p>RabbitMQ常用的Exchange Type有fanout、direct、topic、headers这四种（AMQP规范里还提到两种Exchange Type，分别为system与自定义，这里不予以描述）</p><ul><li>fanout</li></ul><p>转发消息到所有绑定队列。</p><ul><li>direct</li></ul><p>把消息路由到那些binding key与routing key完全匹配的Queue中。</p><ul><li>headers</li></ul><p>headers类型的Exchange不依赖于routing key与binding key的匹配规则来路由消息，而是根据发送的消息内容中的headers属性进行匹配。 在绑定Queue与Exchange时指定一组键值对；当消息发送到Exchange时，RabbitMQ会取到该消息的headers（也是一个键值对的形式），对比其中的键值对是否完全匹配Queue与Exchange绑定时指定的键值对；如果完全匹配则消息会路由到该Queue，否则不会路由到该Queue。</p><ul><li>topic</li></ul><p>topic类型的Exchange在匹配规则上进行了扩展。</p><p>routing key为一个句点号“. ”分隔的字符串（我们将被句点号“. ”分隔开的每一段独立的字符串称为一个单词），如“stock.usd.nyse”、“nyse.vmw”、“quick.orange.rabbit”。</p><p>binding key与routing key一样也是句点号“. ”分隔的字符串。</p><p>binding key中可以存在两种特殊字符“<em>”与“#”，用于做模糊匹配，其中“</em>”用于匹配一个单词，“#”用于匹配多个单词（可以是零个）。</p><h3 id="RabbitMQ-RPC"><a href="#RabbitMQ-RPC" class="headerlink" title="RabbitMQ RPC"></a>RabbitMQ RPC</h3><p><img src="https://cdn.www.sojson.com/file/doc/6121174952" alt=""></p><p><a href="http://www.sojson.com/tag_rabbitmq.html" title="RabbitMQ" target="_blank" rel="noopener">RabbitMQ</a> 中实现<code>RPC</code>的机制是：</p><ul><li><p>客户端发送请求（消息）时，在消息的属性（<code>MessageProperties</code>，在<code>AMQP</code>协议中定义了14中<code>properties</code>，这些属性会随着消息一起发送）中设置两个值<code>replyTo</code>（一个<code>Queue</code>名称，用于告诉服务器处理完成后将通知我的消息发送到这个<code>Queue</code>中）和<code>correlationId</code>（此次请求的标识号，服务器处理完成后需要将此属性返还，客户端将根据这个id了解哪条请求被成功执行了或执行失败）</p></li><li><p>服务器端收到消息并处理</p></li><li><p>服务器端处理完消息后，将生成一条应答消息到<code>replyTo</code>指定的<code>Queue</code>，同时带上<code>correlationId</code>属性</p></li><li><p>客户端之前已订阅<code>replyTo</code>指定的<code>Queue</code>，从中收到服务器的应答消息后，根据其中的<code>correlationId</code>属性分析哪条请求被执行了，根据执行结果进行后续业务处理</p></li></ul><h3 id="RabbitMQ-选型和对比"><a href="#RabbitMQ-选型和对比" class="headerlink" title="RabbitMQ 选型和对比"></a>RabbitMQ 选型和对比</h3><p>1.从社区活跃度</p><p>按照目前网络上的资料，<code>RabbitMQ</code>、<code>activeM</code>、<code>ZeroMQ</code>三者中，综合来看，<code>RabbitMQ</code>是首选。</p><p>2.持久化消息比较</p><p><code>ZeroMq</code>不支持，<code>ActiveMq</code>和<code>RabbitMq</code>都支持。持久化消息主要是指我们机器在不可抗力因素等情况下挂掉了，消息不会丢失的机制。</p><p>3.综合技术实现</p><p>可靠性、灵活的路由、集群、事务、高可用的队列、消息排序、问题追踪、可视化管理工具、插件系统等等。</p><p><code>RabbitMq</code>/<code>Kafka</code>最好，<code>ActiveMq</code>次之，<code>ZeroMq</code>最差。当然<code>ZeroMq</code>也可以做到，不过自己必须手动写代码实现，代码量不小。尤其是可靠性中的：持久性、投递确认、发布者证实和高可用性。</p><p> 4.高并发</p><p>毋庸置疑，<code>RabbitMQ</code>最高，原因是它的实现语言是天生具备高并发高可用的<code>erlang</code>语言。</p><p> 5.比较关注的比较，RabbitMQ和 Kafka</p><p><code>RabbitMq</code>比<code>Kafka</code>成熟，在可用性上，稳定性上，可靠性上， <a href="http://www.sojson.com/tag_rabbitmq.html" title="RabbitMq" target="_blank" rel="noopener">RabbitMq</a> 胜于 <a href="http://www.sojson.com/tag_kafka.html" title="Kafka" target="_blank" rel="noopener">Kafka</a> （理论上）。</p><p>另外，<code>Kafka</code>的定位主要在日志等方面， 因为<code>Kafka</code>设计的初衷就是处理日志的，可以看做是一个日志（消息）系统一个重要组件，针对性很强，所以 如果业务方面还是建议选择<code>RabbitMq</code>。</p><h3 id="RabbitMQ-Erlang-Client"><a href="#RabbitMQ-Erlang-Client" class="headerlink" title="RabbitMQ Erlang Client"></a>RabbitMQ Erlang Client</h3><p><a href="http://www.rabbitmq.com/erlang-client.html" title="Amqp Erlang Client" target="_blank" rel="noopener">Amqp Erlang Client</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;RabbitMQ简介&quot;&gt;&lt;a href=&quot;#RabbitMQ简介&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ简介&quot;&gt;&lt;/a&gt;RabbitMQ简介&lt;/h3&gt;&lt;p&gt;RabbitMQ是实现AMQP（高级消息队列协议）的消息中间件的一种，最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。RabbitMQ主要是为了实现系统之间的双向解耦而实现的。当生产者大量产生数据时，消费者无法快速消费，那么需要一个中间层。保存这个数据。&lt;/p&gt;
-&lt;p&gt;AMQP，即Advanced Message Queuing Protocol，高级消息队列协议，是应用层协议的一个开放标准，为面向消息的中间件设计。消息中间件主要用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。&lt;/p&gt;
-&lt;p&gt;RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开源框架" scheme="http://yoursite.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="rabbitmq" scheme="http://yoursite.com/tags/rabbitmq/"/>
-    
-  </entry>
-  
-  <entry>
     <title>erlang知识点记录</title>
-    <link href="http://yoursite.com/2019/01/08/erlang%20%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2019/01/08/erlang 知识点记录/</id>
+    <link href="http://yoursite.com/2019/01/08/erlang%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2019/01/08/erlang知识点记录/</id>
     <published>2019-01-08T06:22:53.000Z</published>
     <updated>2019-01-08T06:22:53.000Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>gen_server:cast和erlang:send()都可以向指定进程发送消息，两者有什么区别？</p><p>gen_server:cast 内部调用erlang:send使用noconnect</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="keyword">catch</span> erlang:send(Dest, Msg, [noconnect]) <span class="keyword">of</span></span><br><span class="line">    noconnect -&gt;</span><br><span class="line">        spawn(erlang, send, [Dest,Msg]);</span><br><span class="line">    Other -&gt;</span><br><span class="line">        Other</span><br><span class="line">    <span class="keyword">end</span>.</span><br></pre></td></tr></table></figure><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-spec</span> erlang:send<span class="params">(Dest, Msg, Options)</span> -&gt; Res when</span><br><span class="line">      Dest :: dst<span class="params">()</span>,</span><br><span class="line">      Msg :: term<span class="params">()</span>,</span><br><span class="line">      Options :: [nosuspend | noconnect],</span><br><span class="line">      Res :: ok | nosuspend | noconnect.</span><br></pre></td></tr></table></figure><p>nosuspend：遇到会挂起进程时不挂起进程，直接返回nosuspend</p><p>noconnect：遇到远程节点没有连接时不自动连接发送消息，直接返回noconnect</p></li><li><p>gen_server:call</p></li><li><p>rpc:call和gen_server:call 区别？</p><p>rpc模块本身就是gen_server进程，随kernel模块启动，rpc进程启动时通过local注册一个rex的名字。</p><p>rpc:call内部调用gen_server:call({Name,Node},Request)，Name是rex，所以说rpc:call是调用远程节点的rex进程做事情，而gen_server:call可以调用任意进程做事情。</p></li><li><p>erlang:now()和os:timestamp()区别？</p><p>erlang:now()获取erlang虚拟机时间，os:timestamp()获取操作系统时间，对于erlang:start_time函数如果调快系统时间，此定时不会提前收到消息。因为erlang:start_time内部使用erlang虚拟机时间。</p></li><li><p>erlang:send_after和erlang:start_time区别？</p><p>主要是TimerRef，超时消息进入邮箱时，start_time函数的消息携带了TimeRef标识。</p></li><li><p>ref数据类型</p><p>Erlang 虚拟机会创建一个新的 ref。由于全局当前 ref 值是用多个变量表示的，所以 make_ref() 会通过一个自旋锁保护对这些变量的操作，递增全局 ref 的值，然后根据新的 ref 值创建新的 ref 对象并返回对应的 Eterm。递增操作针对 word 0 递增，如果 word 0 超过了218218，则进位到 word 1，word 1 归零的话则进位到 word 2。</p><p>我们打印 ref 的时候，得到的是类似 #Ref&lt;0.0.0.2055&gt; 这样的输出，通过 3 个句点将输出结果分为 4 段。第 1 段，和 pid 和 port 的第一段是一样的，表示节点，在本地节点总是为 0，后面 3 段分别为上面的 word 2、1 和 0。所以 ref 较少的时候前面几段都为 0。</p></li><li><p>ets表</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-spec</span> new<span class="params">(Name, Options)</span> -&gt; tid<span class="params">()</span> | atom<span class="params">()</span> when</span><br><span class="line">      Name :: atom<span class="params">()</span>,</span><br><span class="line">      Options :: [Option],</span><br><span class="line">      Option :: Type | Access | named_table | &#123;keypos,Pos&#125;</span><br><span class="line">              | &#123;heir, Pid :: pid<span class="params">()</span>, HeirData&#125; | &#123;heir, none&#125; | Tweaks,</span><br><span class="line">      Type :: type<span class="params">()</span>,</span><br><span class="line">      Access :: access<span class="params">()</span>,</span><br><span class="line">      Tweaks :: &#123;write_concurrency, boolean<span class="params">()</span>&#125;</span><br><span class="line">              | &#123;read_concurrency, boolean<span class="params">()</span>&#125;</span><br><span class="line">              | compressed,</span><br><span class="line">      Pos :: pos_integer<span class="params">()</span>,</span><br><span class="line">      HeirData :: term<span class="params">()</span>.</span><br></pre></td></tr></table></figure><p>write_concurrency、read_concurrency是用来提升读写性能的，代价是额外的内存。并不是支持读和写的并发控制的，因为ets本身的读写操作就是原子的。通常来说，<strong>ets写数据时整张表是锁定的</strong>，其他进程不能进行读写直到前面的操作完成。并发写可以改变这个情况，<strong>同一个表中的不同记录可以被多个进程并发读写</strong>。有了这个参数，使得ets写记录时表读写锁变成了读锁，就是说，只要不是同一条记录，还可以继续往这个ets表写入数据，提高了并发写效率。但并发写也有弊端，降低数据连续写入的效率和性能。如果有且只有一个进程在读写数据，将会带来一定的开销。而测试发现这个开销比较小，可以忽略。而且，只有一个进程在读写数据的场合比较小。</p></li><li><p>Pid &lt;A,B,C&gt;</p><p>A对应节点信息（0代表本地节点，其他数字代表远程节点）</p><p>B低15字节代表进程表索引</p><p>C16～18字节代表进程唯一标识</p></li><li><p>erlang:dbg、trace、火焰图</p></li><li><p>receive的理解</p><p>receive会检查遍历进程的邮箱一次，如果匹配到条件，就执行条件后的代码，并去掉邮箱中对应消息，停止匹配过程。等待下一条消息到达时触发再次匹配逻辑。</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>gen_server:cast和erlang:send()都可以向指定进程发送消息，两者有什么区别？</p><p>gen_server:cast 内部调用erlang:send使用noconnect</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="keyword">catch</span> erlang:send(Dest, Msg, [noconnect]) <span class="keyword">of</span></span><br><span class="line">    noconnect -&gt;</span><br><span class="line">        spawn(erlang, send, [Dest,Msg]);</span><br><span class="line">    Other -&gt;</span><br><span class="line">        Other</span><br><span class="line">    <span class="keyword">end</span>.</span><br></pre></td></tr></table></figure><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-spec</span> erlang:send<span class="params">(Dest, Msg, Options)</span> -&gt; Res when</span><br><span class="line">      Dest :: dst<span class="params">()</span>,</span><br><span class="line">      Msg :: term<span class="params">()</span>,</span><br><span class="line">      Options :: [nosuspend | noconnect],</span><br><span class="line">      Res :: ok | nosuspend | noconnect.</span><br></pre></td></tr></table></figure><p>nosuspend：遇到会挂起进程时不挂起进程，直接返回nosuspend</p><p>noconnect：遇到远程节点没有连接时不自动连接发送消息，直接返回noconnect</p></li></ol><a id="more"></a><ol start="2"><li><p>gen_server:call</p></li><li><p>rpc:call和gen_server:call 区别？</p><p>rpc模块本身就是gen_server进程，随kernel模块启动，rpc进程启动时通过local注册一个rex的名字。</p><p>rpc:call内部调用gen_server:call({Name,Node},Request)，Name是rex，所以说rpc:call是调用远程节点的rex进程做事情，而gen_server:call可以调用任意进程做事情。</p></li><li><p>erlang:now()和os:timestamp()区别？</p><p>erlang:now()获取erlang虚拟机时间，os:timestamp()获取操作系统时间，对于erlang:start_time函数如果调快系统时间，此定时不会提前收到消息。因为erlang:start_time内部使用erlang虚拟机时间。</p></li><li><p>erlang:send_after和erlang:start_time区别？</p><p>主要是TimerRef，超时消息进入邮箱时，start_time函数的消息携带了TimeRef标识。</p></li><li><p>ref数据类型</p><p>Erlang 虚拟机会创建一个新的 ref。由于全局当前 ref 值是用多个变量表示的，所以 make_ref() 会通过一个自旋锁保护对这些变量的操作，递增全局 ref 的值，然后根据新的 ref 值创建新的 ref 对象并返回对应的 Eterm。递增操作针对 word 0 递增，如果 word 0 超过了218218，则进位到 word 1，word 1 归零的话则进位到 word 2。</p><p>我们打印 ref 的时候，得到的是类似 #Ref&lt;0.0.0.2055&gt; 这样的输出，通过 3 个句点将输出结果分为 4 段。第 1 段，和 pid 和 port 的第一段是一样的，表示节点，在本地节点总是为 0，后面 3 段分别为上面的 word 2、1 和 0。所以 ref 较少的时候前面几段都为 0。</p></li><li><p>ets表</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-spec</span> new<span class="params">(Name, Options)</span> -&gt; tid<span class="params">()</span> | atom<span class="params">()</span> when</span><br><span class="line">      Name :: atom<span class="params">()</span>,</span><br><span class="line">      Options :: [Option],</span><br><span class="line">      Option :: Type | Access | named_table | &#123;keypos,Pos&#125;</span><br><span class="line">              | &#123;heir, Pid :: pid<span class="params">()</span>, HeirData&#125; | &#123;heir, none&#125; | Tweaks,</span><br><span class="line">      Type :: type<span class="params">()</span>,</span><br><span class="line">      Access :: access<span class="params">()</span>,</span><br><span class="line">      Tweaks :: &#123;write_concurrency, boolean<span class="params">()</span>&#125;</span><br><span class="line">              | &#123;read_concurrency, boolean<span class="params">()</span>&#125;</span><br><span class="line">              | compressed,</span><br><span class="line">      Pos :: pos_integer<span class="params">()</span>,</span><br><span class="line">      HeirData :: term<span class="params">()</span>.</span><br></pre></td></tr></table></figure><p>write_concurrency、read_concurrency是用来提升读写性能的，代价是额外的内存。并不是支持读和写的并发控制的，因为ets本身的读写操作就是原子的。通常来说，<strong>ets写数据时整张表是锁定的</strong>，其他进程不能进行读写直到前面的操作完成。并发写可以改变这个情况，<strong>同一个表中的不同记录可以被多个进程并发读写</strong>。有了这个参数，使得ets写记录时表读写锁变成了读锁，就是说，只要不是同一条记录，还可以继续往这个ets表写入数据，提高了并发写效率。但并发写也有弊端，降低数据连续写入的效率和性能。如果有且只有一个进程在读写数据，将会带来一定的开销。而测试发现这个开销比较小，可以忽略。而且，只有一个进程在读写数据的场合比较小。</p></li><li><p>Pid &lt;A,B,C&gt;</p><p>A对应节点信息（0代表本地节点，其他数字代表远程节点）</p><p>B低15字节代表进程表索引</p><p>C16～18字节代表进程唯一标识</p></li><li><p>erlang:dbg、trace、火焰图</p></li><li><p>receive的理解</p><p>receive会检查遍历进程的邮箱一次，如果匹配到条件，就执行条件后的代码，并去掉邮箱中对应消息，停止匹配过程。等待下一条消息到达时触发再次匹配逻辑。</p></li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;ol&gt;
+      &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;gen_server:cast和erlang:send()都可以向指定进程发送消息，两者有什么区别？&lt;/p&gt;
 &lt;p&gt;gen_server:cast 内部调用erlang:send使用noconnect&lt;/p&gt;
-&lt;figure class=&quot;highligh
-      
+&lt;figure class=&quot;highlight erlang&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; erlang:send(Dest, Msg, [noconnect]) &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    noconnect -&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        spawn(erlang, send, [Dest,Msg]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Other -&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Other&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight erlang&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;-spec&lt;/span&gt; erlang:send&lt;span class=&quot;params&quot;&gt;(Dest, Msg, Options)&lt;/span&gt; -&amp;gt; Res when&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Dest :: dst&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Msg :: term&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Options :: [nosuspend | noconnect],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Res :: ok | nosuspend | noconnect.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;nosuspend：遇到会挂起进程时不挂起进程，直接返回nosuspend&lt;/p&gt;
+&lt;p&gt;noconnect：遇到远程节点没有连接时不自动连接发送消息，直接返回noconnect&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -159,6 +188,32 @@
     
     
       <category term="erlang" scheme="http://yoursite.com/tags/erlang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vimdiff</title>
+    <link href="http://yoursite.com/2019/01/08/vimdiff/"/>
+    <id>http://yoursite.com/2019/01/08/vimdiff/</id>
+    <published>2019-01-08T06:22:53.000Z</published>
+    <updated>2019-01-08T06:22:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>##实用的vim下比较两个文件命令：</p><h3 id="1、-vimdiff-file1-file2"><a href="#1、-vimdiff-file1-file2" class="headerlink" title="1、 vimdiff file1 file2"></a>1、 vimdiff file1 file2</h3><p>终端下输入该命令进入vim，垂直分隔窗口进行比较</p><h3 id="2、-vimdiff-o-file1-file2"><a href="#2、-vimdiff-o-file1-file2" class="headerlink" title="2、 vimdiff -o file1 file2"></a>2、 vimdiff -o file1 file2</h3><p>水平分隔窗口进行比较</p><h3 id="3、-ctrl-w-j-k-h-l"><a href="#3、-ctrl-w-j-k-h-l" class="headerlink" title="3、 ctrl+w (j,k,h,l)"></a>3、 ctrl+w (j,k,h,l)</h3><p>上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l）</p><h3 id="4、-ctrl-w-J-K-H-L"><a href="#4、-ctrl-w-J-K-H-L" class="headerlink" title="4、 ctrl+w (J,K,H,L)"></a>4、 ctrl+w (J,K,H,L)</h3><p>上下左右移动光标所在窗口的位置</p><a id="more"></a><h3 id="5、-zo-和-zc"><a href="#5、-zo-和-zc" class="headerlink" title="5、 zo 和 zc"></a>5、 zo 和 zc</h3><p>打开折叠区 和 关闭折叠区</p><h3 id="6、-c-和-c"><a href="#6、-c-和-c" class="headerlink" title="6、 ]c 和 [c"></a>6、 ]c 和 [c</h3><p>将光标移动到下一个不同区 和 上一个不同区</p><h3 id="7、-do-和-dp"><a href="#7、-do-和-dp" class="headerlink" title="7、 do 和 dp"></a>7、 do 和 dp</h3><p>将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置</p><h3 id="8、-diffu"><a href="#8、-diffu" class="headerlink" title="8、 :diffu[!]"></a>8、 :diffu[!]</h3><p>vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较]</p><h3 id="9、-diffo"><a href="#9、-diffo" class="headerlink" title="9、 :diffo[!]"></a>9、 :diffo[!]</h3><p>vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态</p><h3 id="10、-diffs-file1"><a href="#10、-diffs-file1" class="headerlink" title="10、:diffs file1"></a>10、:diffs file1</h3><p>vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口</p><h3 id="11、-vert-diffs-file1"><a href="#11、-vert-diffs-file1" class="headerlink" title="11、:vert diffs file1"></a>11、:vert diffs file1</h3><p>vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口</p><h3 id="12、-difft"><a href="#12、-difft" class="headerlink" title="12、:difft"></a>12、:difft</h3><p>vim下将光标所在窗口变为比较窗口</p><p>##其它技巧：</p><h3 id="1、-diff-u-file1-file2-gt-file3"><a href="#1、-diff-u-file1-file2-gt-file3" class="headerlink" title="1、 diff -u file1 file2 &gt; file3"></a>1、 diff -u file1 file2 &gt; file3</h3><p>终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##实用的vim下比较两个文件命令：&lt;/p&gt;
+&lt;h3 id=&quot;1、-vimdiff-file1-file2&quot;&gt;&lt;a href=&quot;#1、-vimdiff-file1-file2&quot; class=&quot;headerlink&quot; title=&quot;1、 vimdiff file1 file2&quot;&gt;&lt;/a&gt;1、 vimdiff file1 file2&lt;/h3&gt;&lt;p&gt;终端下输入该命令进入vim，垂直分隔窗口进行比较&lt;/p&gt;
+&lt;h3 id=&quot;2、-vimdiff-o-file1-file2&quot;&gt;&lt;a href=&quot;#2、-vimdiff-o-file1-file2&quot; class=&quot;headerlink&quot; title=&quot;2、 vimdiff -o file1 file2&quot;&gt;&lt;/a&gt;2、 vimdiff -o file1 file2&lt;/h3&gt;&lt;p&gt;水平分隔窗口进行比较&lt;/p&gt;
+&lt;h3 id=&quot;3、-ctrl-w-j-k-h-l&quot;&gt;&lt;a href=&quot;#3、-ctrl-w-j-k-h-l&quot; class=&quot;headerlink&quot; title=&quot;3、 ctrl+w (j,k,h,l)&quot;&gt;&lt;/a&gt;3、 ctrl+w (j,k,h,l)&lt;/h3&gt;&lt;p&gt;上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l）&lt;/p&gt;
+&lt;h3 id=&quot;4、-ctrl-w-J-K-H-L&quot;&gt;&lt;a href=&quot;#4、-ctrl-w-J-K-H-L&quot; class=&quot;headerlink&quot; title=&quot;4、 ctrl+w (J,K,H,L)&quot;&gt;&lt;/a&gt;4、 ctrl+w (J,K,H,L)&lt;/h3&gt;&lt;p&gt;上下左右移动光标所在窗口的位置&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux-vimdiff" scheme="http://yoursite.com/tags/linux-vimdiff/"/>
     
   </entry>
   
@@ -191,6 +246,28 @@
   </entry>
   
   <entry>
+    <title>linux查看系统命令</title>
+    <link href="http://yoursite.com/2019/01/08/linux%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B/"/>
+    <id>http://yoursite.com/2019/01/08/linux系统信息查看/</id>
+    <published>2019-01-08T06:22:53.000Z</published>
+    <updated>2019-01-08T06:22:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>inux 查看系统信息命令是linux初学者必备的基础知识, 这些命令也非常有用, 因为进入linux第一件事就可能是首先查看系统信息, 因此必要的系统的学习一下这些linux系统信息命令还是非常有必要的!</p><a id="more"></a><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># uname -a # 查看内核/操作系统/CPU信息 </span></span><br><span class="line"><span class="comment"># head -n 1 /etc/issue # 查看操作系统版本 </span></span><br><span class="line"><span class="comment"># cat /proc/cpuinfo # 查看CPU信息 </span></span><br><span class="line"><span class="comment"># hostname # 查看计算机名 </span></span><br><span class="line"><span class="comment"># lspci -tv # 列出所有PCI设备 </span></span><br><span class="line"><span class="comment"># lsusb -tv # 列出所有USB设备 </span></span><br><span class="line"><span class="comment"># lsmod # 列出加载的内核模块 </span></span><br><span class="line"><span class="comment"># env # 查看环境变量资源 </span></span><br><span class="line"><span class="comment"># free -m # 查看内存使用量和交换区使用量 </span></span><br><span class="line"><span class="comment"># df -h # 查看各分区使用情况 </span></span><br><span class="line"><span class="comment"># du -sh &lt;目录名&gt; # 查看指定目录的大小 </span></span><br><span class="line"><span class="comment"># grep MemTotal /proc/meminfo # 查看内存总量 </span></span><br><span class="line"><span class="comment"># grep MemFree /proc/meminfo # 查看空闲内存量 </span></span><br><span class="line"><span class="comment"># uptime # 查看系统运行时间、用户数、负载 </span></span><br><span class="line"><span class="comment"># cat /proc/loadavg # 查看系统负载磁盘和分区 </span></span><br><span class="line"><span class="comment"># mount | column -t # 查看挂接的分区状态 </span></span><br><span class="line"><span class="comment"># fdisk -l # 查看所有分区 </span></span><br><span class="line"><span class="comment"># swapon -s # 查看所有交换分区 </span></span><br><span class="line"><span class="comment"># hdparm -i /dev/hda # 查看磁盘参数(仅适用于IDE设备) </span></span><br><span class="line"><span class="comment"># dmesg | grep IDE # 查看启动时IDE设备检测状况网络 </span></span><br><span class="line"><span class="comment"># ifconfig # 查看所有网络接口的属性 </span></span><br><span class="line"><span class="comment"># iptables -L # 查看防火墙设置 </span></span><br><span class="line"><span class="comment"># route -n # 查看路由表 </span></span><br><span class="line"><span class="comment"># netstat -lntp # 查看所有监听端口 </span></span><br><span class="line"><span class="comment"># netstat -antp # 查看所有已经建立的连接 </span></span><br><span class="line"><span class="comment"># netstat -s # 查看网络统计信息进程 </span></span><br><span class="line"><span class="comment"># ps -ef # 查看所有进程 </span></span><br><span class="line"><span class="comment"># top # 实时显示进程状态用户 </span></span><br><span class="line"><span class="comment"># w # 查看活动用户 </span></span><br><span class="line"><span class="comment"># id &lt;用户名&gt; # 查看指定用户信息 </span></span><br><span class="line"><span class="comment"># last # 查看用户登录日志 </span></span><br><span class="line"><span class="comment"># cut -d: -f1 /etc/passwd # 查看系统所有用户 </span></span><br><span class="line"><span class="comment"># cut -d: -f1 /etc/group # 查看系统所有组 </span></span><br><span class="line"><span class="comment"># crontab -l # 查看当前用户的计划任务服务 </span></span><br><span class="line"><span class="comment"># chkconfig –list # 列出所有系统服务 </span></span><br><span class="line"><span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务程序 </span></span><br><span class="line"><span class="comment"># rpm -qa # 查看所有安装的软件包</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;inux 查看系统信息命令是linux初学者必备的基础知识, 这些命令也非常有用, 因为进入linux第一件事就可能是首先查看系统信息, 因此必要的系统的学习一下这些linux系统信息命令还是非常有必要的!&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>sysctl.conf调整</title>
     <link href="http://yoursite.com/2019/01/08/linux-sysctl%E8%B0%83%E6%95%B4/"/>
     <id>http://yoursite.com/2019/01/08/linux-sysctl调整/</id>
@@ -215,54 +292,6 @@
   </entry>
   
   <entry>
-    <title>vimdiff</title>
-    <link href="http://yoursite.com/2019/01/08/vimdiff/"/>
-    <id>http://yoursite.com/2019/01/08/vimdiff/</id>
-    <published>2019-01-08T06:22:53.000Z</published>
-    <updated>2019-01-08T06:22:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>##实用的vim下比较两个文件命令：</p><h3 id="1、-vimdiff-file1-file2"><a href="#1、-vimdiff-file1-file2" class="headerlink" title="1、 vimdiff file1 file2"></a>1、 vimdiff file1 file2</h3><p>终端下输入该命令进入vim，垂直分隔窗口进行比较</p><h3 id="2、-vimdiff-o-file1-file2"><a href="#2、-vimdiff-o-file1-file2" class="headerlink" title="2、 vimdiff -o file1 file2"></a>2、 vimdiff -o file1 file2</h3><p>水平分隔窗口进行比较</p><h3 id="3、-ctrl-w-j-k-h-l"><a href="#3、-ctrl-w-j-k-h-l" class="headerlink" title="3、 ctrl+w (j,k,h,l)"></a>3、 ctrl+w (j,k,h,l)</h3><p>上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l）</p><h3 id="4、-ctrl-w-J-K-H-L"><a href="#4、-ctrl-w-J-K-H-L" class="headerlink" title="4、 ctrl+w (J,K,H,L)"></a>4、 ctrl+w (J,K,H,L)</h3><p>上下左右移动光标所在窗口的位置</p><a id="more"></a><h3 id="5、-zo-和-zc"><a href="#5、-zo-和-zc" class="headerlink" title="5、 zo 和 zc"></a>5、 zo 和 zc</h3><p>打开折叠区 和 关闭折叠区</p><h3 id="6、-c-和-c"><a href="#6、-c-和-c" class="headerlink" title="6、 ]c 和 [c"></a>6、 ]c 和 [c</h3><p>将光标移动到下一个不同区 和 上一个不同区</p><h3 id="7、-do-和-dp"><a href="#7、-do-和-dp" class="headerlink" title="7、 do 和 dp"></a>7、 do 和 dp</h3><p>将光标所在不同区域同步为另一个文件该位置的内容 和 将光标所在不同区域内容同步到另一个文件该位置</p><h3 id="8、-diffu"><a href="#8、-diffu" class="headerlink" title="8、 :diffu[!]"></a>8、 :diffu[!]</h3><p>vim下更新当前比较窗口，比较状态下修改文件后，可调用该命令[中括号不为命令部分，如果加!表示如果外部修改了文件，则重新加载比较]</p><h3 id="9、-diffo"><a href="#9、-diffo" class="headerlink" title="9、 :diffo[!]"></a>9、 :diffo[!]</h3><p>vim下关闭当前窗口比较状态，如果加!则关闭所有窗口的比较状态</p><h3 id="10、-diffs-file1"><a href="#10、-diffs-file1" class="headerlink" title="10、:diffs file1"></a>10、:diffs file1</h3><p>vim下加入file1和当前光标所在窗口进行比较，水平分隔窗口</p><h3 id="11、-vert-diffs-file1"><a href="#11、-vert-diffs-file1" class="headerlink" title="11、:vert diffs file1"></a>11、:vert diffs file1</h3><p>vim下加入file1和当前光标所在窗口进行比较，垂直分隔窗口</p><h3 id="12、-difft"><a href="#12、-difft" class="headerlink" title="12、:difft"></a>12、:difft</h3><p>vim下将光标所在窗口变为比较窗口</p><p>##其它技巧：</p><h3 id="1、-diff-u-file1-file2-gt-file3"><a href="#1、-diff-u-file1-file2-gt-file3" class="headerlink" title="1、 diff -u file1 file2 &gt; file3"></a>1、 diff -u file1 file2 &gt; file3</h3><p>终端下输入该命令，可以将file1和file2的比较结果输出到file3中，-u 表示以合并格式比较，-c 为上下文格式，不加为一般格式</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##实用的vim下比较两个文件命令：&lt;/p&gt;
-&lt;h3 id=&quot;1、-vimdiff-file1-file2&quot;&gt;&lt;a href=&quot;#1、-vimdiff-file1-file2&quot; class=&quot;headerlink&quot; title=&quot;1、 vimdiff file1 file2&quot;&gt;&lt;/a&gt;1、 vimdiff file1 file2&lt;/h3&gt;&lt;p&gt;终端下输入该命令进入vim，垂直分隔窗口进行比较&lt;/p&gt;
-&lt;h3 id=&quot;2、-vimdiff-o-file1-file2&quot;&gt;&lt;a href=&quot;#2、-vimdiff-o-file1-file2&quot; class=&quot;headerlink&quot; title=&quot;2、 vimdiff -o file1 file2&quot;&gt;&lt;/a&gt;2、 vimdiff -o file1 file2&lt;/h3&gt;&lt;p&gt;水平分隔窗口进行比较&lt;/p&gt;
-&lt;h3 id=&quot;3、-ctrl-w-j-k-h-l&quot;&gt;&lt;a href=&quot;#3、-ctrl-w-j-k-h-l&quot; class=&quot;headerlink&quot; title=&quot;3、 ctrl+w (j,k,h,l)&quot;&gt;&lt;/a&gt;3、 ctrl+w (j,k,h,l)&lt;/h3&gt;&lt;p&gt;上下左右切换光标所在的窗口（括号中表示可以是其中之一，按下ctrl+w，放开ctrl再按j,k,h,l）&lt;/p&gt;
-&lt;h3 id=&quot;4、-ctrl-w-J-K-H-L&quot;&gt;&lt;a href=&quot;#4、-ctrl-w-J-K-H-L&quot; class=&quot;headerlink&quot; title=&quot;4、 ctrl+w (J,K,H,L)&quot;&gt;&lt;/a&gt;4、 ctrl+w (J,K,H,L)&lt;/h3&gt;&lt;p&gt;上下左右移动光标所在窗口的位置&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="linux-vimdiff" scheme="http://yoursite.com/tags/linux-vimdiff/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux查看系统命令</title>
-    <link href="http://yoursite.com/2019/01/08/linux%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%9F%A5%E7%9C%8B/"/>
-    <id>http://yoursite.com/2019/01/08/linux系统信息查看/</id>
-    <published>2019-01-08T06:22:53.000Z</published>
-    <updated>2019-01-08T06:22:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>inux 查看系统信息命令是linux初学者必备的基础知识, 这些命令也非常有用, 因为进入linux第一件事就可能是首先查看系统信息, 因此必要的系统的学习一下这些linux系统信息命令还是非常有必要的!</p><a id="more"></a><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># uname -a # 查看内核/操作系统/CPU信息 </span></span><br><span class="line"><span class="comment"># head -n 1 /etc/issue # 查看操作系统版本 </span></span><br><span class="line"><span class="comment"># cat /proc/cpuinfo # 查看CPU信息 </span></span><br><span class="line"><span class="comment"># hostname # 查看计算机名 </span></span><br><span class="line"><span class="comment"># lspci -tv # 列出所有PCI设备 </span></span><br><span class="line"><span class="comment"># lsusb -tv # 列出所有USB设备 </span></span><br><span class="line"><span class="comment"># lsmod # 列出加载的内核模块 </span></span><br><span class="line"><span class="comment"># env # 查看环境变量资源 </span></span><br><span class="line"><span class="comment"># free -m # 查看内存使用量和交换区使用量 </span></span><br><span class="line"><span class="comment"># df -h # 查看各分区使用情况 </span></span><br><span class="line"><span class="comment"># du -sh &lt;目录名&gt; # 查看指定目录的大小 </span></span><br><span class="line"><span class="comment"># grep MemTotal /proc/meminfo # 查看内存总量 </span></span><br><span class="line"><span class="comment"># grep MemFree /proc/meminfo # 查看空闲内存量 </span></span><br><span class="line"><span class="comment"># uptime # 查看系统运行时间、用户数、负载 </span></span><br><span class="line"><span class="comment"># cat /proc/loadavg # 查看系统负载磁盘和分区 </span></span><br><span class="line"><span class="comment"># mount | column -t # 查看挂接的分区状态 </span></span><br><span class="line"><span class="comment"># fdisk -l # 查看所有分区 </span></span><br><span class="line"><span class="comment"># swapon -s # 查看所有交换分区 </span></span><br><span class="line"><span class="comment"># hdparm -i /dev/hda # 查看磁盘参数(仅适用于IDE设备) </span></span><br><span class="line"><span class="comment"># dmesg | grep IDE # 查看启动时IDE设备检测状况网络 </span></span><br><span class="line"><span class="comment"># ifconfig # 查看所有网络接口的属性 </span></span><br><span class="line"><span class="comment"># iptables -L # 查看防火墙设置 </span></span><br><span class="line"><span class="comment"># route -n # 查看路由表 </span></span><br><span class="line"><span class="comment"># netstat -lntp # 查看所有监听端口 </span></span><br><span class="line"><span class="comment"># netstat -antp # 查看所有已经建立的连接 </span></span><br><span class="line"><span class="comment"># netstat -s # 查看网络统计信息进程 </span></span><br><span class="line"><span class="comment"># ps -ef # 查看所有进程 </span></span><br><span class="line"><span class="comment"># top # 实时显示进程状态用户 </span></span><br><span class="line"><span class="comment"># w # 查看活动用户 </span></span><br><span class="line"><span class="comment"># id &lt;用户名&gt; # 查看指定用户信息 </span></span><br><span class="line"><span class="comment"># last # 查看用户登录日志 </span></span><br><span class="line"><span class="comment"># cut -d: -f1 /etc/passwd # 查看系统所有用户 </span></span><br><span class="line"><span class="comment"># cut -d: -f1 /etc/group # 查看系统所有组 </span></span><br><span class="line"><span class="comment"># crontab -l # 查看当前用户的计划任务服务 </span></span><br><span class="line"><span class="comment"># chkconfig –list # 列出所有系统服务 </span></span><br><span class="line"><span class="comment"># chkconfig –list | grep on # 列出所有启动的系统服务程序 </span></span><br><span class="line"><span class="comment"># rpm -qa # 查看所有安装的软件包</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;inux 查看系统信息命令是linux初学者必备的基础知识, 这些命令也非常有用, 因为进入linux第一件事就可能是首先查看系统信息, 因此必要的系统的学习一下这些linux系统信息命令还是非常有必要的!&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Mac iTerm使用</title>
     <link href="http://yoursite.com/2018/12/20/iTerm%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2018/12/20/iTerm命令/</id>
@@ -281,6 +310,28 @@
     
     
       <category term="Mac iTerm" scheme="http://yoursite.com/tags/Mac-iTerm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>erlang防坑指南</title>
+    <link href="http://yoursite.com/2018/12/16/erlang%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2018/12/16/erlang防坑指南/</id>
+    <published>2018-12-16T10:35:26.000Z</published>
+    <updated>2018-12-16T10:35:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。<br><a id="more"></a></p><h3 id="‘–’-运算与-‘-’运算"><a href="#‘–’-运算与-‘-’运算" class="headerlink" title="‘–’ 运算与 ‘++’运算"></a>‘–’ 运算与 ‘++’运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1&gt; [1,2,3,4] -- [1] -- [2]. </span><br><span class="line">[2,3,4]</span><br><span class="line">算是erlang经典的问题了。这是从后面算起的，先算 [1] -- [2] ，得到 [1] 后被 [1,2,3,4] --，最后得到 [2,3,4]</span><br><span class="line"> &apos;++&apos;运算也是一样的，也是从后面开始算起。</span><br><span class="line">2&gt; [1,2,3,4] -- [1] ++ [2,3,4].</span><br><span class="line">[]</span><br><span class="line">另外，以下这种情况也要注意，只会减去遇到的第一个元素。</span><br><span class="line">3&gt; [1,2,3,2] -- [2].</span><br><span class="line">[1,3,2]</span><br></pre></td></tr></table></figure><h3 id="erlang-function-exported"><a href="#erlang-function-exported" class="headerlink" title="erlang:function_exported()"></a>erlang:function_exported()</h3><p>这个接口是用来检查模块函数是否导出，但是，如果模块没加载过，这个函数返回值就是false</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3&gt; erlang:function_exported(odbc,start,0).</span><br><span class="line">false</span><br><span class="line">4&gt; odbc:start().</span><br><span class="line">ok</span><br><span class="line">5&gt; erlang:function_exported(odbc,start,0).</span><br><span class="line">true</span><br></pre></td></tr></table></figure><h3 id="erlang-list-to-binary"><a href="#erlang-list-to-binary" class="headerlink" title="erlang:list_to_binary()"></a>erlang:list_to_binary()</h3><p>如果参数是多层嵌套结构，就会被扁平化掉，使用 binary_to_list 不能转成原来的数据，也就是不可逆的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6&gt; list_to_binary([1,2,[3,4],5]) .</span><br><span class="line">&lt;&lt;1,2,3,4,5&gt;&gt;</span><br><span class="line">如果想可逆，可以使用 erlang:term_to_binary</span><br><span class="line">7&gt; binary_to_term(term_to_binary([1,2,[3,4],5])).</span><br><span class="line">[1,2,[3,4],5]</span><br></pre></td></tr></table></figure><h3 id="random-uniform"><a href="#random-uniform" class="headerlink" title="random:uniform()"></a>random:uniform()</h3><p>这个用于生成随机数，返回一个随机数浮点数。但是，这个函数的随机初始种子是个定值，而且种子就放在进程字典，就是说每个进程生成的随机数都是一样的。坑爹啊。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">10&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end)</span><br><span class="line">,ok.</span><br><span class="line">0.4435846174457203 0.7230402056221108</span><br><span class="line">ok</span><br><span class="line">11&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end)</span><br><span class="line">,ok.</span><br><span class="line">0.4435846174457203 0.7230402056221108</span><br><span class="line">ok</span><br></pre></td></tr></table></figure><p>所以，解决的方法就是进程启动后要重置随机数种子，然后再使用这个函数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13&gt; random:seed(erlang:now()), random:uniform().</span><br><span class="line">0.4691405130019146</span><br></pre></td></tr></table></figure><h3 id="io-lib-char-list"><a href="#io-lib-char-list" class="headerlink" title="io_lib:char_list()"></a>io_lib:char_list()</h3><p>这个函数在R15和R16下运行结果可能是相反的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">R15下：</span><br><span class="line">Eshell V5.9.3.1 (abort with ^G)</span><br><span class="line">1&gt; io_lib:char_list([10100,10600,20100]).</span><br><span class="line">false</span><br><span class="line"></span><br><span class="line">R16下：</span><br><span class="line">Eshell V5.10.1 (abort with ^G) </span><br><span class="line">1&gt; io_lib:char_list([10100,10600,20100]). </span><br><span class="line">true</span><br></pre></td></tr></table></figure><h3 id="不同类型数据比较"><a href="#不同类型数据比较" class="headerlink" title="不同类型数据比较"></a>不同类型数据比较</h3><p>比较公式为：number &lt; atom &lt; reference &lt; fun &lt; port &lt; pid &lt; tuple &lt; list &lt; bit string</p><h3 id="系统限制"><a href="#系统限制" class="headerlink" title="系统限制"></a>系统限制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. mnesia或dets有2G限制（无法定制）</span><br><span class="line">2. ets表最大数量默认1400（可用 ERL_MAX_ETS_TABLES 定制）</span><br><span class="line">3. 原子最大数量默认 1048576 （可用 +t 定制）</span><br><span class="line">4. 进程最大数量默认 32768   （可用  +P 定制， 范围1024-134217727）</span><br><span class="line">5. 端口/文件句柄最大数量默认 16384  （可用  +Q  定制， 范围1024-134217727）</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="开发语言" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="erlang" scheme="http://yoursite.com/tags/erlang/"/>
     
   </entry>
   
@@ -310,28 +361,6 @@
   </entry>
   
   <entry>
-    <title>erlang 防坑指南</title>
-    <link href="http://yoursite.com/2018/12/16/erlang%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2018/12/16/erlang防坑指南/</id>
-    <published>2018-12-16T10:35:26.000Z</published>
-    <updated>2018-12-16T10:35:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。<br><a id="more"></a></p><hr><p>title: erlang防坑指南<br>date: 2019-01-08 14:22:53<br>updated: 2019-01-08 14:22:53<br>categories: develop-language</p><h2 id="tags-erlang"><a href="#tags-erlang" class="headerlink" title="tags: erlang"></a>tags: erlang</h2><h3 id="‘–’-运算与-‘-’运算"><a href="#‘–’-运算与-‘-’运算" class="headerlink" title="‘–’ 运算与 ‘++’运算"></a>‘–’ 运算与 ‘++’运算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1&gt; [1,2,3,4] -- [1] -- [2]. </span><br><span class="line">[2,3,4]</span><br><span class="line">算是erlang经典的问题了。这是从后面算起的，先算 [1] -- [2] ，得到 [1] 后被 [1,2,3,4] --，最后得到 [2,3,4]</span><br><span class="line"> &apos;++&apos;运算也是一样的，也是从后面开始算起。</span><br><span class="line">2&gt; [1,2,3,4] -- [1] ++ [2,3,4].</span><br><span class="line">[]</span><br><span class="line">另外，以下这种情况也要注意，只会减去遇到的第一个元素。</span><br><span class="line">3&gt; [1,2,3,2] -- [2].</span><br><span class="line">[1,3,2]</span><br></pre></td></tr></table></figure><h3 id="erlang-function-exported"><a href="#erlang-function-exported" class="headerlink" title="erlang:function_exported()"></a>erlang:function_exported()</h3><p>这个接口是用来检查模块函数是否导出，但是，如果模块没加载过，这个函数返回值就是false</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3&gt; erlang:function_exported(odbc,start,0).</span><br><span class="line">false</span><br><span class="line">4&gt; odbc:start().</span><br><span class="line">ok</span><br><span class="line">5&gt; erlang:function_exported(odbc,start,0).</span><br><span class="line">true</span><br></pre></td></tr></table></figure><h3 id="erlang-list-to-binary"><a href="#erlang-list-to-binary" class="headerlink" title="erlang:list_to_binary()"></a>erlang:list_to_binary()</h3><p>如果参数是多层嵌套结构，就会被扁平化掉，使用 binary_to_list 不能转成原来的数据，也就是不可逆的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6&gt; list_to_binary([1,2,[3,4],5]) .</span><br><span class="line">&lt;&lt;1,2,3,4,5&gt;&gt;</span><br><span class="line">如果想可逆，可以使用 erlang:term_to_binary</span><br><span class="line">7&gt; binary_to_term(term_to_binary([1,2,[3,4],5])).</span><br><span class="line">[1,2,[3,4],5]</span><br></pre></td></tr></table></figure><h3 id="random-uniform"><a href="#random-uniform" class="headerlink" title="random:uniform()"></a>random:uniform()</h3><p>这个用于生成随机数，返回一个随机数浮点数。但是，这个函数的随机初始种子是个定值，而且种子就放在进程字典，就是说每个进程生成的随机数都是一样的。坑爹啊。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">10&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end)</span><br><span class="line">,ok.</span><br><span class="line">0.4435846174457203 0.7230402056221108</span><br><span class="line">ok</span><br><span class="line">11&gt; spawn(fun() -&gt; io:format(&quot;~w ~w~n&quot;,[random:uniform(),random:uniform()]) end)</span><br><span class="line">,ok.</span><br><span class="line">0.4435846174457203 0.7230402056221108</span><br><span class="line">ok</span><br></pre></td></tr></table></figure><p>所以，解决的方法就是进程启动后要重置随机数种子，然后再使用这个函数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13&gt; random:seed(erlang:now()), random:uniform().</span><br><span class="line">0.4691405130019146</span><br></pre></td></tr></table></figure><h3 id="io-lib-char-list"><a href="#io-lib-char-list" class="headerlink" title="io_lib:char_list()"></a>io_lib:char_list()</h3><p>这个函数在R15和R16下运行结果可能是相反的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">R15下：</span><br><span class="line">Eshell V5.9.3.1 (abort with ^G)</span><br><span class="line">1&gt; io_lib:char_list([10100,10600,20100]).</span><br><span class="line">false</span><br><span class="line"></span><br><span class="line">R16下：</span><br><span class="line">Eshell V5.10.1 (abort with ^G) </span><br><span class="line">1&gt; io_lib:char_list([10100,10600,20100]). </span><br><span class="line">true</span><br></pre></td></tr></table></figure><h3 id="不同类型数据比较"><a href="#不同类型数据比较" class="headerlink" title="不同类型数据比较"></a>不同类型数据比较</h3><p>比较公式为：number &lt; atom &lt; reference &lt; fun &lt; port &lt; pid &lt; tuple &lt; list &lt; bit string</p><h3 id="系统限制"><a href="#系统限制" class="headerlink" title="系统限制"></a>系统限制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. mnesia或dets有2G限制（无法定制）</span><br><span class="line">2. ets表最大数量默认1400（可用 ERL_MAX_ETS_TABLES 定制）</span><br><span class="line">3. 原子最大数量默认 1048576 （可用 +t 定制）</span><br><span class="line">4. 进程最大数量默认 32768   （可用  +P 定制， 范围1024-134217727）</span><br><span class="line">5. 端口/文件句柄最大数量默认 16384  （可用  +Q  定制， 范围1024-134217727）</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;任何语言在使用中都会遇到这样那样的问题，erlang也是。这里整理下我遇到的一些问题，避免继续踩坑。说实话，“防坑指南”这个标题有点过于标新立异，不过还是希望能引起重视，避免在实际开发中重复犯这些问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="开发语言" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="erlang" scheme="http://yoursite.com/tags/erlang/"/>
-    
-  </entry>
-  
-  <entry>
     <title>rabbitmq安装</title>
     <link href="http://yoursite.com/2018/12/14/rabbitmq%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2018/12/14/rabbitmq安装/</id>
@@ -350,28 +379,6 @@
     
     
       <category term="rabbitmq安装" scheme="http://yoursite.com/tags/rabbitmq%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>redis安装</title>
-    <link href="http://yoursite.com/2018/12/14/redis%E5%AE%89%E8%A3%85/"/>
-    <id>http://yoursite.com/2018/12/14/redis安装/</id>
-    <published>2018-12-14T09:23:57.000Z</published>
-    <updated>2018-12-14T09:23:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>版本：redis-3.2.8-1.el6.remi.x86_64.rpm</p><a id="more"></a><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">cd /tmp &amp;&amp; wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpm</span></span><br><span class="line">yum install -y redis<span class="number">-3.2</span><span class="number">.8</span><span class="number">-1.</span>el6.remi.x86_64.rpm</span><br><span class="line">su sankuai</span><br><span class="line">mkdir -p /opt/xxx/apps/redis</span><br><span class="line">cd /opt/xxx/apps/redis</span><br><span class="line">## <span class="number">6379</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6379</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.conf</span></span><br><span class="line">redis-server /opt/xxx/apps/redis/<span class="number">6379.</span>conf</span><br><span class="line">## <span class="number">6380</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6380</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf</span></span><br><span class="line">## <span class="number">6381</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6381</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.conf</span></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;版本：redis-3.2.8-1.el6.remi.x86_64.rpm&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开源框架" scheme="http://yoursite.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
     
   </entry>
   
@@ -397,6 +404,28 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis安装</title>
+    <link href="http://yoursite.com/2018/12/14/redis%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2018/12/14/redis安装/</id>
+    <published>2018-12-14T09:23:57.000Z</published>
+    <updated>2018-12-14T09:23:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>版本：redis-3.2.8-1.el6.remi.x86_64.rpm</p><a id="more"></a><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">cd /tmp &amp;&amp; wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis-3.2.8-1.el6.remi.x86_64.rpm</span></span><br><span class="line">yum install -y redis<span class="number">-3.2</span><span class="number">.8</span><span class="number">-1.</span>el6.remi.x86_64.rpm</span><br><span class="line">su sankuai</span><br><span class="line">mkdir -p /opt/xxx/apps/redis</span><br><span class="line">cd /opt/xxx/apps/redis</span><br><span class="line">## <span class="number">6379</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6379</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6379_3.conf -O 6379.conf</span></span><br><span class="line">redis-server /opt/xxx/apps/redis/<span class="number">6379.</span>conf</span><br><span class="line">## <span class="number">6380</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6380</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6380_3.conf -O 6380.conf</span></span><br><span class="line">## <span class="number">6381</span></span><br><span class="line">mkdir -p /opt/xxx/appdatas/redis6381</span><br><span class="line">wget https:<span class="comment">//yangyajun-soft.github.io/redis/redis_6381_3.conf -O 6381.conf</span></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;版本：redis-3.2.8-1.el6.remi.x86_64.rpm&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开源框架" scheme="http://yoursite.com/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
     
   </entry>
   
