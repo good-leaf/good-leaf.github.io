@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-26T09:47:09.409Z</updated>
+  <updated>2019-02-26T09:52:33.741Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
@@ -15,17 +15,22 @@
     <title></title>
     <link href="http://yoursite.com/2019/02/26/Freeswitch%E4%BA%8B%E4%BB%B6/"/>
     <id>http://yoursite.com/2019/02/26/Freeswitch事件/</id>
-    <published>2019-02-26T09:47:09.409Z</published>
-    <updated>2019-02-26T09:47:09.409Z</updated>
+    <published>2019-02-26T09:52:33.741Z</published>
+    <updated>2019-02-26T09:52:33.741Z</updated>
     
-    <content type="html"><![CDATA[<p>Freeswitch内核之事件类型</p><p>事件 说明<br>3 Channel events 信道事件。<br>3.1 Channel states 信道状态。<br>3.2 CHANNEL_CALLSTATE 信道呼叫状态事件。<br>3.3 CHANNEL_CREATE 创建事件。<br>3.4 CHANNEL_DESTROY 销毁事件。<br>3.5 CHANNEL_STATE 呼叫状态事件。当一个信道切换通话状态时发送。此事件并不包含任何附加信息。<br>3.6 CHANNEL_ANSWER 呼叫应答事件。<br>3.7 CHANNEL_HANGUP 挂机事件。<br>3.8 CHANNEL_HANGUP_COMPLETE 挂机完成事件。<br>3.9 CHANNEL_EXECUTE PBX正在执行呼叫事件。<br>3.10 CHANNEL_EXECUTE_COMPLETE 执行完成。<br>3.11 CHANNEL_BRIDGE 一个呼叫两个端点之间的桥接事件。<br>3.12 CHANNEL_UNBRIDGE 停用桥接事件。<br>3.13 CHANNEL_PROGRESS 进度事件，外呼时对方提醒。或者入呼时提醒。<br>3.14 CHANNEL_PROGRESS_MEDIA 媒体进度事件，外呼时对方提醒。或者入呼时提醒。<br>3.15 CHANNEL_OUTGOING 创建一个外呼事件。<br>3.16 CHANNEL_PARK 一个呼叫被挂起(停放)在PBX中。<br>3.17 CHANNEL_UNPARK 一个呼叫被取消挂起(停放)在PBX中。<br>3.18 CHANNEL_APPLICATION 信道产生的应用程序就是事件application=event一般用来捕获呼转<br>3.19 CHANNEL_HOLD 信道保持，使用uuid_hold或者接收SDP的readonly<br>3.20 CHANNEL_UNHOLD 触发后uuid_hold关闭<uuid>或者接收到INVITE SDP= SendRecv的<br>3.21 CHANNEL_ORIGINATE 信道发起事件，触发完成发起（或桥）。<br>3.22 CHANNEL_UUID uuid事件表示唯一的ID通道已经改变。原来的ID将被报告的旧唯一ID。此事件会发生，当您使用参数origination_uuid时发出命令发起/桥。<br>4 System events<br>4.1 SHUTDOWN 设置以启动的FreeSWITCH的关机顺序。<br>4.2 MODULE_LOAD 模块加载<br>4.3 MODULE_UNLOAD 模块卸载<br>4.4 RELOADXML 重新加载已经配置的XML<br>4.5 NOTIFY 通知<br>4.6 SEND_MESSAGE 发送信息<br>4.7 RECV_MESSAGE 接收信息<br>4.8 REQUEST_PARAMS 请求参数<br>4.9 CHANNEL_DATA 信道数据<br>4.10 GENERAL 总体<br>4.11 COMMAND 命令<br>4.12 SESSION_HEARTBEAT session心跳<br>4.13 CLIENT_DISCONNECTED 客户端断开<br>4.14 SERVER_DISCONNECTED 服务器断开<br>4.15 SEND_INFO 发送信息<br>4.16 RECV_INFO 接收信息<br>4.17 CALL_SECURE 保密呼叫<br>4.18 NAT nat<br>4.19 RECORD_START 开始记录<br>4.20 RECORD_STOP 停止记录<br>4.21 PLAYBACK_START 开始播放<br>4.22 PLAYBACK_STOP 停止播放<br>4.23 CALL_UPDATE 更新呼叫</uuid></p><p><a href="https://blog.csdn.net/hry2015/article/details/78347467" target="_blank" rel="noopener">https://blog.csdn.net/hry2015/article/details/78347467</a></p>]]></content>
+    <content type="html"><![CDATA[<hr><pre><code>title: Freeswitch事件date: 2019-02-23 14:22:53updated: 2019-02-23 14:22:53categories: 开源框架tags: Freeswitch</code></pre><hr><p>Freeswitch内核之事件类型</p><p>事件 说明<br>3 Channel events 信道事件。<br>3.1 Channel states 信道状态。<br>3.2 CHANNEL_CALLSTATE 信道呼叫状态事件。<br>3.3 CHANNEL_CREATE 创建事件。<br>3.4 CHANNEL_DESTROY 销毁事件。<br>3.5 CHANNEL_STATE 呼叫状态事件。当一个信道切换通话状态时发送。此事件并不包含任何附加信息。<br>3.6 CHANNEL_ANSWER 呼叫应答事件。<br>3.7 CHANNEL_HANGUP 挂机事件。<br>3.8 CHANNEL_HANGUP_COMPLETE 挂机完成事件。<br>3.9 CHANNEL_EXECUTE PBX正在执行呼叫事件。<br>3.10 CHANNEL_EXECUTE_COMPLETE 执行完成。<br>3.11 CHANNEL_BRIDGE 一个呼叫两个端点之间的桥接事件。<br>3.12 CHANNEL_UNBRIDGE 停用桥接事件。<br>3.13 CHANNEL_PROGRESS 进度事件，外呼时对方提醒。或者入呼时提醒。<br>3.14 CHANNEL_PROGRESS_MEDIA 媒体进度事件，外呼时对方提醒。或者入呼时提醒。<br>3.15 CHANNEL_OUTGOING 创建一个外呼事件。<br>3.16 CHANNEL_PARK 一个呼叫被挂起(停放)在PBX中。<br>3.17 CHANNEL_UNPARK 一个呼叫被取消挂起(停放)在PBX中。<br>3.18 CHANNEL_APPLICATION 信道产生的应用程序就是事件application=event一般用来捕获呼转<br>3.19 CHANNEL_HOLD 信道保持，使用uuid_hold或者接收SDP的readonly<br>3.20 CHANNEL_UNHOLD 触发后uuid_hold关闭<uuid>或者接收到INVITE SDP= SendRecv的<br>3.21 CHANNEL_ORIGINATE 信道发起事件，触发完成发起（或桥）。<br>3.22 CHANNEL_UUID uuid事件表示唯一的ID通道已经改变。原来的ID将被报告的旧唯一ID。此事件会发生，当您使用参数origination_uuid时发出命令发起/桥。<br>4 System events<br>4.1 SHUTDOWN 设置以启动的FreeSWITCH的关机顺序。<br>4.2 MODULE_LOAD 模块加载<br>4.3 MODULE_UNLOAD 模块卸载<br>4.4 RELOADXML 重新加载已经配置的XML<br>4.5 NOTIFY 通知<br>4.6 SEND_MESSAGE 发送信息<br>4.7 RECV_MESSAGE 接收信息<br>4.8 REQUEST_PARAMS 请求参数<br>4.9 CHANNEL_DATA 信道数据<br>4.10 GENERAL 总体<br>4.11 COMMAND 命令<br>4.12 SESSION_HEARTBEAT session心跳<br>4.13 CLIENT_DISCONNECTED 客户端断开<br>4.14 SERVER_DISCONNECTED 服务器断开<br>4.15 SEND_INFO 发送信息<br>4.16 RECV_INFO 接收信息<br>4.17 CALL_SECURE 保密呼叫<br>4.18 NAT nat<br>4.19 RECORD_START 开始记录<br>4.20 RECORD_STOP 停止记录<br>4.21 PLAYBACK_START 开始播放<br>4.22 PLAYBACK_STOP 停止播放<br>4.23 CALL_UPDATE 更新呼叫</uuid></p><p><a href="https://blog.csdn.net/hry2015/article/details/78347467" target="_blank" rel="noopener">https://blog.csdn.net/hry2015/article/details/78347467</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Freeswitch内核之事件类型&lt;/p&gt;
-&lt;p&gt;事件 说明&lt;br&gt;3 Channel events 信道事件。&lt;br&gt;3.1 Channel states 信道状态。&lt;br&gt;3.2 CHANNEL_CALLSTATE 信道呼叫状态事件。&lt;br&gt;3.3 CHANNEL_CR
+        &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;title: Freeswitch事件
+date: 2019-02-23 14:22:53
+updated: 2019-02-23 14:22:53
+categories: 开源框架
+tags: Freeswitch
+&lt;/code&gt;&lt;/pre&gt;&lt;h
       
     
     </summary>
@@ -37,14 +42,22 @@
     <title></title>
     <link href="http://yoursite.com/2019/02/26/RPC/"/>
     <id>http://yoursite.com/2019/02/26/RPC/</id>
-    <published>2019-02-26T09:47:09.409Z</published>
-    <updated>2019-02-26T09:47:09.409Z</updated>
+    <published>2019-02-26T09:52:33.741Z</published>
+    <updated>2019-02-26T09:52:33.741Z</updated>
     
-    <content type="html"><![CDATA[<p> RPC（即Remote Procedure Call，远程过程调用）和HTTP（HyperText Transfer Protocol，超文本传输协议）他们最本质的区别，就是RPC主要工作在TCP协议之上，而HTTP服务主要是工作在HTTP协议之上，我们都知道HTTP协议是在传输层协议TCP之上的，所以效率来看的话，RPC当然是要更胜一筹。</p><a id="more"></a><p>1、RPC服务<br>（1）RPC架构<br>      先说说RPC服务的基本架构吧。一个完整的RPC架构里面包含了四个核心的组件，分别是Client ,Server,Client Stub以及Server Stub，这个Stub大家可以理解为存根。分别说说这几个组件：<br>    1)客户端（Client），服务的调用方。<br>    2)服务端（Server），真正的服务提供者。<br>    3)客户端存根，存放服务端的地址消息，再将客户端的请求参数打包成网络消息，然后通过网络远程发送给服务方。<br>    4)服务端存根，接收客户端发送过来的消息，将消息解包，并调用本地的方法。</p><p><img src="https://img-blog.csdn.net/20180409220809083" alt=""></p><p>（2）同步调用与异步调用<br>      什么是同步调用？什么是异步调用？同步调用就是客户端等待调用执行完成并返回结果。异步调用就是客户端不等待调用执行完成返回结果，不过依然可以通过回调函数等接收到返回结果的通知。如果客户端并不关心结果，则可以变成一个单向的调用。这个过程有点类似于Java中的callable和runnable接口，我们进行异步执行的时候，如果需要知道执行的结果，就可以使用callable接口，并且可以通过Future类获取到异步执行的结果信息。如果不关心执行的结果，直接使用runnable接口就可以了，因为它不返回结果，当然啦，callable也是可以的，我们不去获取Future就可以了。<br>（3）流行的RPC框架<br>    目前流行的开源RPC框架还是比较多的。下面重点介绍三种：<br>    1）gRPC是Google最近公布的开源软件，基于最新的HTTP2.0协议，并支持常见的众多编程语言。 我们知道HTTP2.0是基于二进制的HTTP协议升级版本，目前各大浏览器都在快马加鞭的加以支持。 这个RPC框架是基于HTTP协议实现的，底层使用到了Netty框架的支持。<br>    2）Thrift是Facebook的一个开源项目，主要是一个跨语言的服务开发框架。它有一个代码生成器来对它所定义的IDL定义文件自动生成服务代码框架。用户只要在其之前进行二次开发就行，对于底层的RPC通讯等都是透明的。不过这个对于用户来说的话需要学习特定领域语言这个特性，还是有一定成本的。<br>    3）Dubbo是阿里集团开源的一个极为出名的RPC框架，在很多互联网公司和企业应用中广泛使用。协议和序列化框架都可以插拔是及其鲜明的特色。同样 的远程接口是基于Java Interface，并且依托于spring框架方便开发。可以方便的打包成单一文件，独立进程运行，和现在的微服务概念一致。<br>2、HTTP服务</p><p>（1）HTTP接口<br>      相比RPC，HTTP接口开发也就是我们常说的RESTful风格的服务接口。的确，对于在接口不多、系统与系统交互较少的情况下，解决信息孤岛初期常使用的一种通信手段；优点就是简单、直接、开发方便。利用现成的http协议进行传输。做后台接口开发的时候，需要写一份接口文档，严格地标明输入输出是什么？说清楚每一个接口的请求方法，以及请求参数需要注意的事项等。</p>]]></content>
+    <content type="html"><![CDATA[<hr><pre><code>title: RPC调用date: 2019-02-23 14:22:53updated: 2019-02-23 14:22:53categories: 协议tags: RPC调用</code></pre><hr><pre><code>RPC（即Remote Procedure Call，远程过程调用）和HTTP（HyperText Transfer Protocol，超文本传输协议）他们最本质的区别，就是RPC主要工作在TCP协议之上，而HTTP服务主要是工作在HTTP协议之上，我们都知道HTTP协议是在传输层协议TCP之上的，所以效率来看的话，RPC当然是要更胜一筹。</code></pre><a id="more"></a><p>1、RPC服务<br>（1）RPC架构<br>      先说说RPC服务的基本架构吧。一个完整的RPC架构里面包含了四个核心的组件，分别是Client ,Server,Client Stub以及Server Stub，这个Stub大家可以理解为存根。分别说说这几个组件：<br>    1)客户端（Client），服务的调用方。<br>    2)服务端（Server），真正的服务提供者。<br>    3)客户端存根，存放服务端的地址消息，再将客户端的请求参数打包成网络消息，然后通过网络远程发送给服务方。<br>    4)服务端存根，接收客户端发送过来的消息，将消息解包，并调用本地的方法。</p><p><img src="https://img-blog.csdn.net/20180409220809083" alt=""></p><p>（2）同步调用与异步调用<br>      什么是同步调用？什么是异步调用？同步调用就是客户端等待调用执行完成并返回结果。异步调用就是客户端不等待调用执行完成返回结果，不过依然可以通过回调函数等接收到返回结果的通知。如果客户端并不关心结果，则可以变成一个单向的调用。这个过程有点类似于Java中的callable和runnable接口，我们进行异步执行的时候，如果需要知道执行的结果，就可以使用callable接口，并且可以通过Future类获取到异步执行的结果信息。如果不关心执行的结果，直接使用runnable接口就可以了，因为它不返回结果，当然啦，callable也是可以的，我们不去获取Future就可以了。<br>（3）流行的RPC框架<br>    目前流行的开源RPC框架还是比较多的。下面重点介绍三种：<br>    1）gRPC是Google最近公布的开源软件，基于最新的HTTP2.0协议，并支持常见的众多编程语言。 我们知道HTTP2.0是基于二进制的HTTP协议升级版本，目前各大浏览器都在快马加鞭的加以支持。 这个RPC框架是基于HTTP协议实现的，底层使用到了Netty框架的支持。<br>    2）Thrift是Facebook的一个开源项目，主要是一个跨语言的服务开发框架。它有一个代码生成器来对它所定义的IDL定义文件自动生成服务代码框架。用户只要在其之前进行二次开发就行，对于底层的RPC通讯等都是透明的。不过这个对于用户来说的话需要学习特定领域语言这个特性，还是有一定成本的。<br>    3）Dubbo是阿里集团开源的一个极为出名的RPC框架，在很多互联网公司和企业应用中广泛使用。协议和序列化框架都可以插拔是及其鲜明的特色。同样 的远程接口是基于Java Interface，并且依托于spring框架方便开发。可以方便的打包成单一文件，独立进程运行，和现在的微服务概念一致。<br>2、HTTP服务</p><p>（1）HTTP接口<br>      相比RPC，HTTP接口开发也就是我们常说的RESTful风格的服务接口。的确，对于在接口不多、系统与系统交互较少的情况下，解决信息孤岛初期常使用的一种通信手段；优点就是简单、直接、开发方便。利用现成的http协议进行传输。做后台接口开发的时候，需要写一份接口文档，严格地标明输入输出是什么？说清楚每一个接口的请求方法，以及请求参数需要注意的事项等。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt; RPC（即Remote Procedure Call，远程过程调用）和HTTP（HyperText Transfer Protocol，超文本传输协议）他们最本质的区别，就是RPC主要工作在TCP协议之上，而HTTP服务主要是工作在HTTP协议之上，我们都知道HTTP协议是在传输层协议TCP之上的，所以效率来看的话，RPC当然是要更胜一筹。&lt;/p&gt;
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;title: RPC调用
+date: 2019-02-23 14:22:53
+updated: 2019-02-23 14:22:53
+categories: 协议
+tags: RPC调用
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;RPC（即Remote Procedure Call，远程过程调用）和HTTP（HyperText Transfer Protocol，超文本传输协议）他们最本质的区别，就是RPC主要工作在TCP协议之上，而HTTP服务主要是工作在HTTP协议之上，我们都知道HTTP协议是在传输层协议TCP之上的，所以效率来看的话，RPC当然是要更胜一筹。
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
