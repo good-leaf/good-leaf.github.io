@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/03/01/%E5%90%8D%E8%AF%8D/</loc>
+    
+    <lastmod>2019-03-01T12:26:18.594Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/03/01/ejabberd%E7%BC%96%E7%A0%81%E9%A3%8E%E6%A0%BC/</loc>
+    
+    <lastmod>2019-03-01T09:22:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/02/26/Freeswitch%E4%BA%8B%E4%BB%B6/</loc>
     
     <lastmod>2019-02-26T09:52:33.741Z</lastmod>
@@ -12,6 +26,13 @@
     <loc>http://yoursite.com/2019/02/26/RPC/</loc>
     
     <lastmod>2019-02-26T09:52:33.741Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/02/23/Voip%E7%BD%91%E7%BB%9C%E6%A0%B8%E5%BF%83%E8%AE%BE%E5%A4%87-SBC/</loc>
+    
+    <lastmod>2019-02-23T06:22:53.000Z</lastmod>
     
   </url>
   
@@ -58,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2019-02-18T06:41:12.437Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-02-18T06:41:12.437Z</lastmod>
     
@@ -93,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/01/08/vimdiff/</loc>
+    <loc>http://yoursite.com/2019/01/08/erlang%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2019-01-08T06:22:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/01/08/erlang%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/</loc>
+    <loc>http://yoursite.com/2019/01/08/vimdiff/</loc>
     
     <lastmod>2019-01-08T06:22:53.000Z</lastmod>
     
